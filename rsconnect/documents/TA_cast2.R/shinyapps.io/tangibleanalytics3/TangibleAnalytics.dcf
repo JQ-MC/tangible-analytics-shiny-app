@@ -1,0 +1,13 @@
+name: TangibleAnalytics
+title: TangibleAnalytics
+username:
+account: tangibleanalytics3
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3944246
+bundleId: 4457995
+url: https://tangibleanalytics3.shinyapps.io/TangibleAnalytics/
+when: 1618163810.22182
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .RData|App proves.Rmd|Ooops_PROBLEMA.Rmd|Ooops_PROBLEMA_cast.Rmd|Ooops_Problemes.html|TA_cast.R|TA_val.R|www/arearea_tria2.png|www/giverny_tria2.png|www/nenufar_tria2.png|www/soleil_tria2.png|www/style.css

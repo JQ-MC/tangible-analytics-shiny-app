@@ -1,0 +1,3722 @@
+---
+logo: null
+output:
+  html_document:
+    
+    includes:
+      in_header: header.html
+    number_sections: yes
+    toc: yes
+    toc_float: yes
+pagetitle: Analytics PRO de la teua conversa
+---
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,700&display=swap');
+
+
+
+   article {
+    width: 100%;
+    opacity: 0.97;
+    padding: 20px;
+    margin: 0px auto 0px;
+    background-color: #fff;
+    box-shadow: #c0c0c0 5px 0px 35px -8px;
+}
+
+.columna{
+    padding: 5px;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+
+.site-content-inner,
+.front-page-section-inner {
+	width: 100%;
+}
+
+.header {
+      text-align: center;
+    background: white;
+    color: #831923;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: -1.5px 1.5px #e77e89;
+}
+
+subheader {
+    font-style: italic;
+    font-size: 30px;
+}
+
+.temps{
+  text-align:center;
+  font-size: 26px;
+
+}
+
+.persones{
+  text-align:center;
+  font-size: 25px;
+
+}
+
+
+.promo{
+  text-align: center;
+  font-size:27px;
+  font-weight:900;
+  
+}
+
+.subpromo{
+  text-align: center;
+  
+}
+
+
+* {
+    box-sizing: border-box;
+}
+article {
+    display: block;
+}
+
+
+
+
+#TOC:hover {
+  opacity: 1;
+}
+
+
+
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #fff;
+    background-color: #831923;
+}
+
+
+.tocify {
+
+  width: 100% !important;
+  border: none;
+}
+
+   /* TOC links */
+
+.list-group-item {
+    color: #7b8a8b;
+    font-size: 16px;
+    opacity: 0.96;
+}
+
+.list-group-item.active {
+    color: #2c3e50;
+    background-color: white;
+    border: none;
+}
+
+.list-group-item:hover, 
+.list-group-item.active:hover {
+    color: #131b23;
+    background-color: white;
+}
+
+a {
+    color: #831923;
+    text-decoration: auto;
+}
+
+a:hover {
+ color: #780A15; /* darker color when hovering */
+}
+
+
+
+.navbar-default {
+    background-color: #141c25f2;
+}
+
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.active>a, 
+a.dropdown-toggle:hover {
+  background-color: #141c25 !important;
+}
+
+/* Dropdown menu color */
+.navbar-default .dropdown-menu {
+  background-color: #141c25;
+}
+
+/* Dropdown menu hover color */
+  .navbar-default .dropdown-menu>li>a:hover {
+    background-color: #202831f2;
+  }
+
+/* Navbar Links when hovered*/
+.navbar-default .dropdown-menu>.active>a
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav:hover, 
+.navbar-default .navbar-nav>li>a:hover, 
+a.navbar-brand:hover {
+  color: #ffffffab !important;
+  background-color: #141c25;
+}
+
+ftitol{
+  font-size:25px;
+  font-weight:bold;
+  text-align: center;
+  
+}
+
+.funfact{
+text-align: center; 
+font-size:25px;  
+font-weight:bold; 
+color: gold;
+
+}
+
+/* funfact */
+
+.card {
+  background: #fff;
+  border-radius: 2px;
+  display: block;
+  height: auto;
+  margin: 1rem;
+  position: relative;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 4%;
+  padding-block: 2%;
+  padding-right: 4%;
+  text-align: center;
+}
+
+.card-1{
+
+  box-shadow: rgba(131, 25, 35, 0.4) -5px 5px, rgba(131, 25, 35, 0.3) -10px 10px, rgba(131, 25, 35, 0.2) -15px 15px, rgba(131, 25, 35, 0.1) -20px 20px, rgba(131, 25, 35, 0.05) -25px 25px;
+
+
+}
+
+.card-2{
+
+box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+
+}
+
+.card-3{
+box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+
+}
+
+.card-4{
+box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+}
+
+body{
+  font-family:  "Cabin","Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 12pt;
+  background-color:#ffffff;
+
+  background-image: url("https://tangibleanalytics.eu/wp-content/uploads/2021/01/back6.gif");
+  background-repeat: repeat;
+  background-size: 450px 450px;
+}
+
+
+#nav_logo {
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+code, kbd, pre, samp {
+    font-family:"Cabin","Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align: center;
+    
+}
+
+pre {
+    display: flow-root;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    border: 0px
+    
+}
+
+p.caption {
+  font-size: 0.9em;
+  font-style: italic;
+  color: grey;
+  margin-right: 10%;
+  margin-left: 10%;  
+  text-align: center;
+}
+
+  /* Space Between TOC and 
+  Righthand side content on large screens */
+
+ @media (min-width: 992px) {
+    .col-md-9 {
+      width: 75%;
+      padding-left: 5em !important;
+    }
+ }
+ 
+ 
+#TOC::before {
+  content: "";
+  display: block;
+  height: 111px;
+  margin: 10px 0px 0px 0px;
+  background-image: url("https://tangibleanalytics.eu/wp-content/uploads/2021/01/logo.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.97;
+  background-color: #ffffff;
+
+}
+
+
+@media only screen and (max-width: 600px) {
+   article {
+    width: 115%;
+    opacity: 0.96;
+    padding: 8px;
+    margin: 0px -5.8% -0px;
+    background-color: #fff;
+    box-shadow:#fff 0px 0px 0px 0px;
+    
+}
+
+
+.funfact{
+text-align: center; 
+font-size:20px;  
+font-weight:bold; 
+color: gold;
+
+}
+
+body{
+  background-size: 150px 150px;
+  font-size: 10pt;
+}
+
+p.caption {
+  font-size: 7.5pt;
+  font-style: italic;
+  color: grey;
+  margin-right: 10%;
+  margin-left: 10%;  
+  text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 2px;
+  display: block;
+  height: auto;
+  margin: 1rem;
+  position: relative;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 4%;
+  padding-block: 2%;
+  padding-right: 4%;
+  text-align: center;
+}
+.temps{
+  text-align:center;
+  font-size: 20px;
+
+}
+
+.persones{
+  text-align:center;
+  font-size: 17px;
+
+}
+
+subheader {
+    font-style: italic;
+    font-size: 19px;
+}
+.header {
+
+    font-size: 28px;
+
+}
+
+.columna{
+
+  width: 100%;
+}
+
+
+}
+
+
+</style>
+
+
+```{r eval=FALSE, include=FALSE}
+<script>
+
+  $(document).ready(function() {
+    $('#TOC').parent().prepend('<div id=\"nav_logo\"><a href="https://tangibleanalytics.eu/"><img src=\"http://tangibleanalytics.eu/wp-content/uploads/2020/07/cropped-Color-logo-no-background-2-1536x469.png\"></a></div>');
+  });
+</script>
+```
+
+
+
+<article>
+
+<br><br><br><br><br><br>
+
+
+<div class="header">
+  <header>La teua conversa és ara Tangible</header>
+  <subheader>És el moment de descobrir-la</subheader>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+
+
+
+```{r eval=FALSE, include=FALSE}
+
+library(dplyr)
+library(tidyr)
+library(wordcloud2)
+library(stringr)
+library(magrittr)
+library(tm)
+library(quanteda)
+library(ggplot2)
+library(readr)
+library(wordcloud2)
+library(webshot)
+library(lubridate)
+library(textcat)
+library(htmlwidgets) #per a guardar en html
+library(ggtext) #per a element_markdown
+library(png)
+library(tidytext)
+library(cluster)
+library(lsa)
+
+
+
+
+
+```
+
+
+
+
+
+
+```{r include=FALSE}
+
+#se creen dos tipus d'estil de grafic per a que tots tinguen el mateix
+theme_y<- theme(axis.title = element_blank(),
+        legend.position = "none",
+        panel.grid.major.x = element_line(colour = "grey88"),
+        panel.background = element_blank(),
+        axis.text = element_text(face="bold", color="grey64", size=10),
+        axis.ticks = element_blank(),
+        text = element_text(family = "sans"),
+                )
+
+theme_x<- theme(axis.title= element_blank(),
+        legend.position = "none",
+        panel.grid.major.y = element_line(colour = "grey88"),
+        panel.background = element_blank(),
+        axis.text = element_text(face="bold", color="grey64", size=10),
+        axis.ticks = element_blank(),
+        text = element_text(family = "sans"),
+                )
+
+
+```
+
+
+```{r include=FALSE}
+#Se creen estes funcions per a ajustar el tamand dels plots depenent del nombre de persones
+
+
+height<- function(num_persones){
+  #Per a ajustar el height quan persona esta en l'Vertical
+  #Menor de 5 persones es igual a 4, despres 0.2 per cada persona
+  #x<-c(30, 25, 20, 15, 10, 5) persones
+  #y<-c(9,8, 7, 6, 5, 4)
+  
+  if (num_persones<=5){
+    num=4
+    
+  }else{
+    num=4+(num_persones-5)*0.2
+  }
+  
+  return(num)
+}
+
+
+hores_usuari<-function(num_persones){
+  #Per a ajustar el height en hores per persona
+  # cada 3 augmenta 2 el tamany. 3persones = 3
+  #c(2,5,9,16,21) #persones
+  #c(3,5,7,11,17)
+  
+  return((floor((num_persones-1)/3)*2)+3)
+  
+}
+
+
+size_labels<-function(num_persones){
+  #Per al tamany dels labels en mitjana missatge i els de labels
+  #Menor de 5 persones es igual a 10, despres restem 0.2 per cada persona
+  #x<-c(2,5, 9, 13,16, 20, 27)#persones
+  #y<-c(10,10,9,8, 8,7, 5.5  )
+  if (num_persones<=5){
+    num=10
+    
+  }else if(num_persones>=40){
+    num=3
+    
+  }else{
+    num=10-(num_persones-5)*0.2
+  }
+  
+  return(num)
+}
+
+
+
+size_text<- function(num_persones){
+  #per a el temps que se tarda en contestar
+  
+   if (num_persones<=5){
+    num=10
+    
+  }else if(num_persones>=17){
+    num=2
+    
+  }else if(num_persones<10){
+    
+    num=7-(num_persones-5)*0.6
+  
+  
+  }else{
+    num=9-(num_persones-5)*0.6
+  }
+  
+  return(num)
+}
+
+interaccio_height<- function(num_persones){
+  #per a les grafiques d'interaccio. tendencia exponencial
+  
+   if (num_persones<=17){
+    num=exp(1.2944 +  0.1692*num_persones)
+    
+  }else{
+    num=exp(1.0544 +  0.1392*num_persones)
+  }
+  
+  return(num)
+}
+  
+
+
+############### ES CREA NOMRE_USUARIS
+nombre_usuaris<-unique(xat$usuari)
+###############
+
+height_plot=height(length(nombre_usuaris))
+label_size=size_labels(length(nombre_usuaris))
+height_horespersona<-hores_usuari(length(nombre_usuaris))
+text_size= size_text(length(nombre_usuaris))
+height_interaccio= interaccio_height(length(nombre_usuaris))
+```
+
+
+
+```{r include=FALSE}
+#Es gasta baix de forma invertida en el mapa de calor
+
+nom_mesos<-c("Gener", "Febrer", "Març", "Abril", "Maig", "Juny", "Juliol", "Agost", "Setembre", "Octubre", "Novembre", "Desembre")
+
+fun_fact<-paste0(nom_mesos[month(xat$data[1])], " de ", year(xat$data[1]), " ~ ", nom_mesos[month(xat$data[nrow(xat)])], " de ", year(xat$data[nrow(xat)]))
+
+```
+
+
+<div class="temps"> <b> `r fun_fact` </b> </div>
+
+<br>
+
+```{r include=FALSE}
+
+i=1
+fun_fact <- nombre_usuaris[i]
+i=2
+while (i < length(nombre_usuaris)){
+  
+  fun_fact<- paste0(fun_fact, ", ",nombre_usuaris[i])
+  i=i+1
+}
+
+fun_fact<- paste0(fun_fact, " i ",nombre_usuaris[i])
+
+```
+
+<div class="persones"> <b> `r fun_fact` </b> </div>
+
+<br><br><br>
+
+# Missatges per persona {.tabset .tabset-fade .tabset-pills}
+
+***
+
+## General
+
+Qui envia més missatges? Descobreix el total de missatges enviats i el percentatge sobre el total de la conversa de cadascú!
+
+<br>
+
+```{r fig.height= height_plot, echo=FALSE, fig.align="center", fig.cap="<br>Horitzontal: Percentatge de participació //  Vertical: Persones que participen a la conversa // Etiquetes: Percentatge exacte - Total missatges"}
+
+xat %>% group_by(usuari) %>% 
+  summarise(total=n(), percentatge=round(total/length(xat$usuari)*100,1)) %>% 
+  ggplot(., aes(x=reorder(usuari,-total), y=percentatge, fill=usuari, label=total)) + 
+  geom_col(width = .85) + 
+  geom_label(aes(x=usuari, y=max(percentatge)*1.05, label=total), colour = "white", fontface = "bold", size=4.5)+ #TOTAL
+  geom_label(aes(x=usuari, y=-1, label=paste(percentatge, "%", sep="")), colour = "white", fontface = "bold", size=4.5)+
+  theme_y+
+    scale_y_continuous(labels = function(x) paste0(x, "%"), limits = c(-1.2, NA))+
+  coord_flip()
+
+
+#Seria interessant girar el 
+
+```
+
+<br>
+ 
+```{r include=FALSE}
+#dies que s'han parlat i quin es el percentatge respecte del periode total
+
+dies_totals<-  length(xat[!duplicated(xat$data),]$data)  #val per a m'es endavant
+
+d<- parse_number( format(difftime(last(xat$data), xat$data[1]), format="%d"))
+
+fun_fact<- paste0("D'un total de ", d+1, " dies des de l'inici de la conversa fins a la data més recent, n'heu parlat ", dies_totals, ". El ", round(dies_totals/(d+1)*100, 1), "%!")
+```
+ 
+ 
+<br>
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+
+`r fun_fact`
+
+
+<br>
+
+</div>
+
+
+
+<br><br><br><br>
+
+## Per any
+
+Les coses poden anar canviant amb el temps... Vigila qui aporta més al conjunt de la conversa cada any!
+
+<br>
+
+```{r fig.height= height_plot, echo=FALSE, fig.align="left" ,fig.cap="<br>Horitzontal: Percentatge // Vertical: Persones que participen a la conversa"}
+################ FA FALTA. POSAR EN LO GLOBAL!!!!
+xat$any<- as.factor(format(xat$data, "%Y"))
+
+
+##########
+
+dataset_plot<- xat %>% group_by(any, usuari) %>%
+  summarise(total=n()) %>%
+  group_by(any)%>%
+    mutate(total_any=sum(total), percentatge=round(total/total_any*100,2))
+
+dataset_plot %>%
+  ggplot(., aes(x=usuari, y=percentatge, fill=any))+
+  geom_col(position="dodge")+
+  theme_y+
+    theme(legend.position = "top",
+          legend.text = element_text(face="bold", color="grey64", size=10)
+          #legend.background = element_rect(size=0.5, linetype="solid", colour ="black")
+          )+
+  scale_y_continuous(labels = function(x) paste0(x, "%"))+
+coord_flip()+
+  labs(fill="Any")
+
+
+```
+
+<br>
+
+```{r include=FALSE}
+dataset_plot<-dataset_plot %>%
+  group_by(usuari)%>%
+  filter(percentatge==max(percentatge)) 
+
+
+fun_fact<-"Quin és l'any on més ha participat percentualment cadascú? <br>
+
+
+"
+for (i in 1:nrow(dataset_plot)){
+  fun_fact<-paste0(fun_fact, dataset_plot$usuari[i], ": any ", dataset_plot$any[i], " amb una participació del ", dataset_plot$percentatge[i], "%! <br>")
+  
+  
+}
+
+```
+
+
+<br>
+
+<div class="card card-4">
+
+<div class="funfact">
+<br>
+★★★ FUN FACT ★★★
+
+</div>
+
+
+`r fun_fact`
+
+
+<br>
+
+</div>
+
+<br><br><br><br>
+
+
+# Missatges per dies de la setmana {.tabset .tabset-fade .tabset-pills}
+
+***
+
+```{r include=FALSE}
+
+
+
+##################################
+dia_set_nom= c("Dilluns", "Dimarts", "Dimecres", "Dijous", "Divendres", "Dissabte", "Diumenge")
+
+wd<-data.frame(dia_set=1:7,
+               dia_set_nom, #valencia
+               stringsAsFactors = F)
+
+
+xat$dia_set<-wday(xat$data)   # mirar si funciona per a tots els tipus. type num
+############################
+```
+
+## General
+
+Tots sabem que no és igual un dilluns que un dissabte. Com és en el teu cas? El nombre de missatges enviats canvia depenent del dia de la setmana?
+
+<br>
+
+```{r echo=FALSE, fig.align="left",  fig.cap="<br>Horitzontal: Dies de la setmana // Vertical: Percentatge // Etiquetes: Percentatge exacte - Total missatges"}
+
+
+xat %>% group_by(dia_set) %>% 
+  summarise(total=n(), percentatge=round(total/length(xat$usuari)*100,1)) %>% 
+  inner_join(., wd, by="dia_set") %>%
+  ggplot(., aes(x=dia_set, y=percentatge, fill=dia_set_nom)) + 
+  geom_col(width = .85) + 
+  geom_label(aes(x=dia_set, y=max(percentatge)*1.1, label=total), colour = "white", fontface = "bold", size=4.5)+ #TOTAL
+  geom_label(aes(x=dia_set, y=-1, label=paste(percentatge, "%", sep="")), colour = "white", fontface = "bold", size=4.5)+
+  theme_x+
+  scale_y_continuous(labels = function(x) paste0(x, "%"))+
+  scale_x_continuous("", labels = dia_set_nom, breaks = 1:7) 
+
+
+```
+
+<br>
+
+```{r include=FALSE}
+#FUNFACT
+#Mitjana de missatges per dia
+
+d<-xat%>% group_by(data)%>%
+          summarise(total=n())%>%
+          arrange(desc(total))
+
+fun_fact<- paste0("Envieu una mitjana de ",round(mean(d$total),2)," missatges cada vegada que parleu!")
+
+
+```
+
+
+<br>
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+
+`r fun_fact`
+
+
+<br>
+
+</div>
+
+
+
+
+
+<br><br><br><br>
+
+
+## Per any
+
+
+Ho vas pillant, no? Ara els dies de la setmana per any. Veus alguna diferència amb anys anteriors?
+
+<br>
+
+```{r echo=FALSE, fig.align="left", fig.cap="<br>Horitzontal: Dies de la Setmana // Vertical: Percentatge anual"}
+
+
+dataset_plot<- xat %>% group_by(any, dia_set) %>%
+  summarise(total=n()) %>%
+  inner_join(., wd, by="dia_set")
+
+
+  dataset_plot %>% group_by(any)%>%
+    mutate(total_any=sum(total), percentatge=round(total/total_any*100,2)) %>%
+  ggplot(., aes(x=dia_set, y=percentatge, fill=any))+
+  geom_col( position = "dodge") +
+  theme_x +
+    theme(legend.position = "right",
+          legend.text = element_text(face="bold", color="grey64", size=10))+
+  scale_y_continuous(labels = function(x) paste0(x, "%"))+
+    scale_x_continuous("", labels = dia_set_nom, breaks = 1:7) +
+    labs(fill="Any")
+
+
+
+
+```
+
+<br>
+
+```{r include=FALSE}
+#FUNFACT
+#Els dies que mes s'ha parlat
+#La d ve de dalt
+
+fun_fact<- paste0("Quins són els dies on heu parlat més? 
+
+                  1r: El dia ", 
+                  format(d$data[1],format="%d-%m-%Y"), " amb un total de ", d$total[1], " missatges!
+                  2n: El dia ",
+                  format(d$data[2],format="%d-%m-%Y"), " amb un total de ", d$total[2], " missatges!
+                  3r: El dia ",
+                  format(d$data[3],format="%d-%m-%Y"), " amb un total de ", d$total[3], " missatges!")
+
+
+
+```
+
+<br>
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+
+`r fun_fact`
+
+
+<br>
+
+</div>
+
+
+<br><br><br><br>
+
+# Nombre de missatges per hores {.tabset .tabset-fade .tabset-pills}
+***
+
+## General
+
+El vostre horari definit pels missatges que envieu: amb totals de missatges per hores i percentatge sobre el total.
+<br>
+
+```{r echo=FALSE, fig.align="left", fig.cap="<br>Horitzontal: Hores del dia // Vertical: Percentatge // Etiquetes: Percentatge exacte - Total missatges"}
+                                             
+
+dataset_plot<- data.frame(hora2= 0:23)
+
+#Hores del dia. Gasta hora2
+
+dataset_plot<- xat %>% 
+  group_by(hora2) %>% 
+  summarise(total=n(), percentatge=round(total/length(xat$usuari)*100,1) ) %>%
+  right_join(., dataset_plot, by=c("hora2")) 
+
+#canviem NA a 0
+dataset_plot[is.na(dataset_plot)]<-0
+
+#incis per a qui parla primer
+
+if (which.min(dataset_plot$total)-1 %in% c(0,1,2,3,4,5,6)){
+  min_=which.min(dataset_plot$total)-1
+  
+}else{
+  min_1=1
+}
+
+
+
+dataset_plot%>% 
+  ggplot(., aes(x=hora2, y=percentatge))+
+  geom_hline(yintercept=0, color="grey")+
+  geom_line(color="red", size=2) +
+  geom_label(aes(x=hora2, y=percentatge, label=total, fill="green"), colour = "white", fontface = "bold", size=2.5)+ #TOTAL
+  geom_label(aes(x=hora2, y= -0.7, label=percentatge, fill="green"), colour = "white", fontface = "bold", size=2.5)+ #PERCENTATGE
+  theme_minimal()+
+  theme(axis.title.x = element_blank(),
+        axis.title.y=element_blank(),
+        legend.position = "none",
+        panel.grid.major.x = element_blank(),
+        axis.text = element_text(face="bold", color="grey64", size=10),
+        text = element_text(family = "sans")
+                )+
+  scale_y_continuous(labels = function(x) paste0(x, "%"))+
+  scale_x_continuous("", labels = as.character(0:23), breaks = 0:23 ,sec.axis = sec_axis(~., labels = as.character(0:23), breaks = 0:23))
+```
+
+```{r}
+
+      
+```
+
+
+<br>
+
+```{r include=FALSE}
+#El minut on mes es parla
+
+d<-as.data.frame(table(minute(xat$hora)))
+
+d<-d[which.max(d$Freq),]
+
+fun_fact<-paste0("El minut en el que s'han enviat MÉS missatges és el ", d[1], "! Amb un total de ", d[2], " missatges!")
+
+
+```
+
+
+
+<br>
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+
+`r fun_fact`
+
+
+<br>
+
+</div>
+
+<br><br><br><br>
+
+## Per any
+
+Ací pots vore si els horaris de la conversa han variat amb el temps.
+<br>
+
+```{r echo=FALSE, fig.align="left", fig.cap="<br>Horitzontal: Hores del dia // Vertical: Percentatge per cada any"}
+                                       
+########## Per a corregir els NA que ixen si no has parlat i posar 0
+nombre_anys<-unique(xat$any)
+
+
+#########
+
+dataset_plot<- data.frame(any=rep(nombre_anys, each=24),
+                          hora2= rep(0:23, times=length(nombre_anys)))
+
+      
+
+#Hores del dia. Gasta hora2
+dataset_plot<-xat %>% 
+  group_by(any, hora2) %>% summarise(total=n())%>%
+group_by(any) %>% mutate(percentatge=round(total/sum(total)*100,1)) %>%
+right_join(., dataset_plot, by=c("any", "hora2")) 
+
+#canviem NA a 0
+dataset_plot[is.na(dataset_plot)]<-0
+
+
+ dataset_plot %>%
+  ggplot(., aes(x=hora2, y=percentatge, color=any))+
+  geom_hline(yintercept=0, color="grey")+
+  geom_line( size=1.5, alpha=0.7) +
+  theme_minimal()+
+  theme(axis.title.x = element_blank(),
+        axis.title.y=element_blank(),
+        panel.grid.major.x = element_blank(),
+        axis.text = element_text(face="bold", color="grey64", size=10),
+        text = element_text(family = "sans")
+                )+
+   scale_y_continuous(labels = function(x) paste0(x, "%"))+
+  scale_x_continuous("", labels = as.character(0:23), breaks = 0:23 ,sec.axis = sec_axis(~., labels = as.character(0:23), breaks = 0:23))+
+   labs(color="Any")
+
+```
+
+<br>
+
+```{r include=FALSE}
+#El minut on menys es parla
+
+d<-as.data.frame(table(minute(xat$hora)))
+
+d<-d[which.min(d$Freq),]
+
+fun_fact<-paste0("El minut en el que s'han enviat MENYS missatges és el ", d[1], "! Amb un total de ", d[2], " missatges!")
+
+
+```
+
+<br>
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+
+`r fun_fact`
+
+
+<br>
+
+</div>
+
+<br><br><br><br>
+
+## Per persona
+
+I ara per persona! Quin és l'horari de cada persona de la conversa? Mira-ho!
+<br>
+
+```{r fig.height= height_horespersona, echo=FALSE, fig.align="left" , fig.cap="<br>Horitzontal: Hores del dia // Vertical: Percentatge"}
+
+
+dataset_plot<- data.frame(usuari=rep(nombre_usuaris, each=24),
+                          hora2= rep(0:23, times=length(nombre_usuaris)))
+
+      
+
+#Hores del dia. Gasta hora2
+dataset_plot<-xat %>% 
+  group_by(usuari, hora2) %>% summarise(total=n())%>%
+group_by(usuari) %>% mutate(percentatge=round(total/sum(total)*100,1)) %>%
+right_join(., dataset_plot, by=c("usuari", "hora2")) 
+
+#canviem NA a 0
+dataset_plot[is.na(dataset_plot)]<-0
+
+
+
+
+
+ dataset_plot %>%
+  ggplot(., aes(x=hora2, y=percentatge, color=usuari))+
+  geom_hline(yintercept=0, color="grey")+
+  geom_line( size=1.5, alpha=0.75) +
+  theme_minimal()+
+  theme(axis.title.x = element_blank(),
+        axis.title.y=element_blank(),
+        legend.position = "none",
+        panel.grid.major.x = element_blank(),
+        axis.text = element_text(face="bold", color="grey64", size=10),
+        text = element_text(family = "sans"),
+                )+
+   scale_y_continuous(labels = function(x) paste0(x, "%"))+
+   facet_wrap(~usuari, ncol = 3 )
+ 
+ 
+ # scale_x_continuous("", labels = as.character(0:23), breaks = 0:23 ,sec.axis = sec_axis(~., labels = as.character(0:23), breaks = 0:23))
+
+```
+
+<br>
+
+
+
+```{r echo=FALSE}
+#FUNFACT
+#MINUT D'OR PER PERSONA
+
+d<-as.data.frame(table(minute(xat$hora), xat$usuari)) 
+  
+d<-d%>% group_by(Var2) %>% #Var2 'es usuari
+  summarise(Minut=which.max(Freq),"Nombre total"=max(Freq))
+
+fun_fact<-"Minut d'or per persona: \n\n"
+for (i in 1:nrow(d)){
+  fun_fact<-paste0(fun_fact, d$Var2[i], ": minut ", d$Minut[i], " amb un total de ", d$`Nombre total`[i], " missatges!<br>")
+  
+  
+}
+
+
+```
+
+<br>
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+
+`r fun_fact`
+
+
+<br>
+
+</div>
+
+
+<br><br><br><br>
+
+
+# Qui parla primer
+***
+
+Un debat que no deixa ningú indiferent: qui comença més converses? Solucionat en la gràfica de baix: Les vegades que algú ha començat una conversa.
+<br>
+
+
+
+```{r fig.height= height_plot, echo=FALSE, fig.align="left", fig.cap="<br>Horitzontal: Percentatge // Vertical: Persones  // Etiquetes: Percentatge exacte - Total vegades"}
+#Agafem els dies totals en que s'ha parlat
+# la variable dies_totals ja esta creada en el primer funfact
+
+#Elaborar estad'itics i plot
+
+
+
+#xat%>% group_by(data)%>%
+  
+xat %>%
+  filter(hora2>=min_) %>% #Este min 
+.[!duplicated(.$data),] %>% 
+  group_by(usuari)%>% 
+  summarise(total=n(), percentatge=round(total/dies_totals*100, 1))%>%
+  ggplot(., aes(x=reorder(usuari,-percentatge), y=percentatge, fill=usuari))+
+  geom_col() +
+  geom_label(aes(x=usuari, y=max(percentatge), label=total), colour = "white", fontface = "bold", size=5)+
+  geom_label(aes(x=usuari, y=0, label=paste(percentatge, "%", sep="")), colour = "white", fontface = "bold", size=5)+ #PERCENTATGE
+  theme_y+
+    coord_flip() +
+    scale_y_reverse( labels= function(x) paste0(x, "%"))
+
+  
+      
+```
+
+<br>
+
+```{r include=FALSE}
+#FUNFACT. El periode de dies que mes heu parlat
+
+#Sh'a de vore el tema de les variables
+
+
+d<-xat$data[!duplicated(xat$data)] #les dates no repetides
+
+df<-NULL
+
+sum=1
+for (i in 1:(length(d)-1)) {  #L'algorisme comprova si el dia de hui mes 1 'es el mateix que el seguent dia en d
+  
+  if(d[i]+days(1)==d[i+1]){
+    sum=1+sum
+    
+  }else{
+    df<-c(df, sum)
+    sum=1
+  }
+  
+  
+}
+df<-c(df, sum)
+
+
+#Extraccio del periode de temps i dels dies
+
+periode<-df[which.max(df)] 
+
+ultim_dia<-sum(df[1:which.max(df)])
+
+df<-d[(ultim_dia-periode+1):ultim_dia]
+
+fun_fact<-paste0("El rècord de dies consecutius parlats és de ", periode, " dies! Un periode que comprén des del ", format(df[1], format="%d-%m-%Y"), " al ", format(df[length(df)], format="%d-%m-%Y"), ".")
+
+```
+
+
+<br>
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+
+`r fun_fact`
+
+
+<br>
+
+</div>
+
+<br><br><br><br>
+
+
+# Qui respon primer
+
+***
+
+I qui respon primer a qui comença la conversa? Només has de baixar un poc més!
+
+<br>
+
+```{r fig.height= height_plot, echo=FALSE, fig.align="left", fig.cap="<br>Horitzontal: Percentatge // Vertical: Persones  // Etiquetes: Percentatge exacte - Total vegades"}
+
+
+  xat$usuari<-as.character(xat$usuari)
+  
+  files<-nrow(xat)
+  
+  data_ev=xat$data[1] #els que son evaluats amb les iteracions
+  usuari_ev<-""
+  done=F
+  
+  segons<-c()
+  
+  for (i in  1:files){
+    
+    if(data_ev!=xat$data[i]){
+      usuari_ev<-xat$usuari[i]
+      data_ev<-xat$data[i]
+      done=F
+    }else{
+      if(!done & usuari_ev!=xat$usuari[i]){
+        segons<-c(segons, xat$usuari[i])
+        done=T
+        
+      }
+    }
+    
+  
+  }
+
+
+#table(segons)
+
+dataset_plot<- data.frame(usuari=segons )
+
+dataset_plot %>% 
+  group_by(usuari)%>% 
+  summarise(total=n(), percentatge=round(total/dies_totals*100, 1))%>%
+  ggplot(., aes(x=reorder(usuari,-percentatge), y=percentatge, fill=usuari))+
+  geom_col() +
+  coord_flip() +
+  geom_label(aes(x=usuari, y=max(percentatge), label=total), colour = "white", fontface = "bold", size=5)+
+  geom_label(aes(x=usuari, y=0, label=paste(percentatge, "%", sep="")), colour = "white", fontface = "bold", size=5)+ #PERCENTATGE
+  theme_y +
+  scale_y_continuous(labels = function(x) paste0(x, "%"), limits=c(-1, NA))
+  
+   
+
+#posar grids verticals!!!!!
+```
+
+<br><br><br><br>
+
+# Temps {.tabset .tabset-fade .tabset-pills}
+
+***
+
+## En contestar
+
+La típica disputa de qui tarda més en contestar i qui ho fa instantàniament resolta ací baix:
+
+
+<br>
+
+
+```{r fig.height= height_plot, echo=FALSE, fig.align="center", fig.cap="<br>Etiquetes: Temps que tardeu en contestar"}
+
+#juntem els dies i les hores de les dates de xat
+dia_hora<-xat$data+ xat$hora
+
+#calculem els intervals de temps que passen d'un missatge a un altre
+interval_temps<-data.frame(usuari=xat$usuari[2:(nrow(xat))] )
+interval_temps$temps<-  dia_hora[1:(nrow(xat)-1)] - dia_hora[2:(nrow(xat))]
+
+#Ens quedem amb els intervals els quals el missatge de dalt siga diferent al nom seu
+interval_temps<-interval_temps[2:nrow(interval_temps),][!interval_temps$usuari[2:(nrow(interval_temps))]==interval_temps$usuari[1:(nrow(interval_temps)-1)],]
+
+interval_temps$temps<-as.numeric(interval_temps$temps)
+
+#plot en minuts
+dataset_plot<-interval_temps %>%
+  dplyr::filter(temps > -61200) %>%
+   group_by(usuari)%>%
+  summarise(mean=abs(mean(temps))) %>%
+  mutate(mean=round(seconds_to_period(mean),0)) 
+
+dataset_plot$mean<- as.character(dataset_plot$mean) %>% str_replace_all(., pattern = c("M"), replacement = c("min")) %>% str_replace_all(., pattern = c("S"), replacement = c("s"))
+  
+dataset_plot%>%
+  ggplot(aes(x=usuari, y=1, fill=usuari))+
+  geom_label(aes(x=usuari, y=1, label=mean), colour = "white", fontface = "bold", size=9)+ #TOTAL
+  facet_wrap(~usuari, ncol = 3,scales = "free_x")  +
+  theme_minimal()+
+  theme(legend.position = "none",
+        panel.grid = element_blank(),
+        axis.title = element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        panel.background = element_blank(),
+         strip.text.x = element_text(
+        size = 16, face="bold", color="grey64"
+        ))+
+  scale_y_continuous( limits = c(0.9, 1.1))
+
+
+
+```
+
+
+```{r include=FALSE}
+
+interval_temps <- interval_temps %>%  dplyr::filter(temps > -61200)
+
+mtemps<-round(seconds_to_period(abs(mean(interval_temps$temps))),0)  %>% str_replace_all(., pattern = c("M"), replacement = c("min")) %>% str_replace_all(., pattern = c("S"), replacement = c("s"))
+
+fun_fact<- paste0("El temps mitjà en contestar de la conversa és de ", mtemps, ". Qui està per damunt i per baix?" )
+
+```
+
+
+
+<br>
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+
+`r fun_fact`
+
+
+<br>
+
+</div>
+
+<br><br><br><br>
+
+
+
+## En que te contesten
+
+Ara a l'inrevés: quant tarden la resta de les persones en contestar-te a tu!
+
+<br>
+
+```{r fig.height= height_plot, echo=FALSE, fig.align="center", fig.cap="<br>Etiquetes: Temps que tarden en contestar-te"}
+
+temps<-c()
+usuaris_<-c()
+for (x in nombre_usuaris){
+  
+  temps<-c(temps, mean(interval_temps$temps[ which(interval_temps$usuari==x)+1], na.rm = T))
+  
+  usuaris_<-c(usuaris_, x)
+  
+}
+
+
+dataset_plot<-data.frame(usuari=usuaris_, temps=temps)%>%
+  group_by(usuari) %>%
+ summarise(mean=abs(mean(temps))) %>%
+  mutate(mean=round(seconds_to_period(mean),0)) 
+
+dataset_plot$mean<- as.character(dataset_plot$mean) %>% str_replace_all(., pattern = c("M"), replacement = c("min")) %>% str_replace_all(., pattern = c("S"), replacement = c("s"))
+  
+dataset_plot%>%
+  ggplot(aes(x=usuari, y=1, fill=usuari))+
+  geom_label(aes( label=mean), colour = "white", fontface = "bold", size=9)+ #TOTAL
+  facet_wrap(~usuari, ncol = 3,scales = "free_x")  +
+  theme_minimal()+
+  theme(legend.position = "none",
+        panel.grid = element_blank(),
+        axis.title = element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        panel.background = element_blank(),
+         strip.text.x = element_text(
+        size = 16, face="bold", color="grey64"
+        ))+
+  scale_y_continuous( limits = c(0.9, 1.1))
+```
+
+
+
+```{r include=FALSE}
+
+
+fun_fact<- paste0("És el mateix funfact, però així també tens la referència ací!<br><br>El temps mitjà en contestar de la conversa és de ", mtemps, "." )
+
+```
+
+
+
+<br>
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+
+`r fun_fact`
+
+
+<br>
+
+</div>
+
+<br><br><br><br>
+
+# Interaccions {.tabset .tabset-fade .tabset-pills}
+***
+
+
+## Respons 
+
+Et mostrem amb qui interactues més i amb qui menys segons a qui respons. El _quadrat_ és el punt de referència de la normalitat i el _triangle_ marca si aquesta interacció és major o menor del que "deuria de ser".
+
+
+<br>
+
+```{r fig.height=height_interaccio, echo=FALSE ,  fig.align="center",  fig.cap="<br>Horitzontal : Percentatge d'interacció sobre el total // Vertical : Persones a qui respons // Quadrat: Marca de la normalitat // Triangle: Valor real"}
+
+usuaris=sort(unique(xat$usuari))
+intervencions<-xat$usuari[2:nrow(xat)][!xat$usuari[2:(nrow(xat))]==xat$usuari[1:(nrow(xat)-1)]]
+
+dataset_plot<-data.frame()
+
+ for (x in usuaris){
+
+usuari<-x
+
+#creem dataset particular de cada usuari. iniciem amb tants noms -1 n'hi hagen
+df_particular<-data.frame(usuari=rep(usuari, length.out=length(usuaris)-1))
+df_particular$interactua_amb= usuaris[usuaris !=usuari]
+
+#mirem quin seria el percentatge d'actuacio de cada usuari si l'usuari particular no estiguera
+normal=intervencions %>% table() %>% as.data.frame() %>% filter(.!=usuari) %>% mutate(freq=Freq/sum(Freq)*100) %>% select(1,3)
+colnames(normal)<- c("interactua_amb", "perc_normal")
+
+#ara farem inner joins per a que els noms no se descuadren
+df_particular<-inner_join(df_particular,normal, by="interactua_amb")
+
+#es respost
+es_respost<-data.frame(interactua_amb=usuaris[usuaris !=usuari])
+es_respost<-left_join(es_respost, table(intervencions[which(intervencions==usuari)-1]) %>% as.data.frame() %>% mutate(freq_es_respost=Freq/sum(Freq)*100), by=c("interactua_amb"="Var1"))
+
+
+df_particular<-inner_join(df_particular, es_respost, by="interactua_amb")
+
+
+#respon a
+respon_a<-data.frame(interactua_amb=usuaris[usuaris !=usuari])
+respon_a<-left_join(respon_a,table(intervencions[which(intervencions==usuari)+1]) %>% as.data.frame() %>% mutate(freq_respon_a=Freq/sum(Freq)*100), by=c("interactua_amb"="Var1"))
+
+df_particular<-inner_join(df_particular, respon_a, by="interactua_amb")
+
+
+dataset_plot<-rbind(dataset_plot, df_particular)
+
+
+}
+
+dataset_plot[is.na(dataset_plot)]<-0
+
+dataset_plot %>%
+  mutate(color_= ifelse(freq_respon_a>=perc_normal, yes ="#1EA225", no="#E94040" )) %>%
+  ggplot(aes(x=interactua_amb))+
+  geom_point(aes(y=perc_normal), shape=15, color="grey64", size=4)+
+  #geom_point(aes(y=freq_es_respost,  color=color_),size=4, shape=17)+
+  geom_point(aes(y=freq_respon_a, color=color_),size=4,shape=17)+
+  
+  # geom_segment(aes( y = perc_normal, xend =interactua_amb, yend =freq_respon_a ),                  arrow = arrow(length = unit(0.5, "cm")))+
+  theme_x+
+  coord_flip()+
+  scale_color_identity()+
+  facet_wrap(~usuari, ncol = 1,scales = "free_y")+
+  scale_y_continuous( limits = c(0, NA))
+
+
+```
+
+<br>
+
+```{r include=FALSE}
+#nombre de paraules diferents en el xat
+err<- dataset_plot %>% group_by(usuari) %>%
+  summarise(err=sum(abs(perc_normal-freq_respon_a)))
+
+
+fun_fact<- paste0("La persona que respon de manera més uniforme és ", err$usuari[which.min(err$err)], "!<br><br>
+                  I la persona que té major tendència a respondre de manera més selectiva és ",err$usuari[which.max(err$err)],"!")
+
+```
+ 
+ 
+
+<br>
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+
+`r fun_fact`
+
+
+<br>
+
+</div>
+
+
+
+
+
+<br><br><br>
+
+
+
+<div class="columna">
+  <a href="https://ko-fi.com/tangibleanalytics">
+    <img src="https://tangibleanalytics.eu/wp-content/uploads/2021/04/kofi2.png" style="width:45%">
+  </a>
+  <br>
+    T'està agradant? Ens ha costat molt de treball i esforç que siga gratuït🥵 <br>
+    Reconeix-nos la feina suportant-nos econòmicament! 🥳
+</div>
+
+
+<br><br>
+
+
+
+
+## Et responen
+
+Ara et mostrem com interactueu segons com vos responen les persones del xat. El _quadrat_ continua sent el punt de referència de la normalitat i el _triangle_ marca si aquesta interacció és major o menor del que "deuria de ser". 
+
+<br>
+
+```{r fig.height=height_interaccio, echo=FALSE ,  fig.align="center",  fig.cap="<br>Horitzontal : Percentatge d'interacció sobre el total // Vertical : Persones que et responen // Quadrat: Marca de la normalitat // Triangle: Valor real"}
+
+dataset_plot %>%
+  mutate(color_= ifelse(freq_es_respost>=perc_normal, yes ="#1EA225", no="#E94040" )) %>%
+  ggplot(aes(x=interactua_amb))+
+  geom_point(aes(y=perc_normal), shape=15, color="grey64", size=4)+
+  geom_point(aes(y=freq_es_respost,  color=color_),size=4, shape=17)+
+  #geom_point(aes(y=freq_respon_a, color=color_),size=4, shape=17)+
+  
+  # geom_segment(aes( y = perc_normal, xend =interactua_amb, yend =freq_respon_a ),                  arrow = arrow(length = unit(0.5, "cm")))+
+  theme_x+
+  coord_flip()+
+  scale_color_identity()+
+  facet_wrap(~usuari, ncol = 1,scales = "free_y")+
+  scale_y_continuous( limits = c(0, NA))
+```
+
+
+
+
+```{r include=FALSE}
+#nombre de paraules diferents en el xat
+err<- dataset_plot %>% group_by(usuari) %>%
+  summarise(err=sum(abs(perc_normal-freq_es_respost)))
+
+
+fun_fact<- paste0("La persona a qui responeu de manera més uniforme és ", err$usuari[which.min(err$err)], "!<br><br>
+                  I la persona a qui responeu de manera més selectiva és ",err$usuari[which.max(err$err)],"!")
+
+```
+ 
+ 
+
+<br>
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+
+`r fun_fact`
+
+
+<br>
+
+</div>
+
+<br><br><br><br>
+
+```{r include=FALSE}
+#TROBAR MILLOR LLOC
+#SERVIX PER A IDENTIFICAR QUINS MISSATGES SON QU'E
+
+#AND VAL   <Fitxers multimèdia omesos>   Aquest missatge s'ha suprimit    Has suprimit el missatge
+#AND CAST  <Multimedia omitido>          Este mensaje fue eliminado       Eliminaste este mensaje
+#AND ANG   <Media omitted>               This message was deleted         You deleted this message
+
+#IOS VAL      Àudio omès  enganxina omesa   Imatge omesa  Aquest missatge s'ha suprimit. Has suprimit el missatge.
+#IOS CAST    audio omitido sticker omitido  imagen omitida Este mensaje fue eliminado.  Eliminaste este mensaje.
+#IOS ANG   audio omitted sticker omitted  image omitted  This message was deleted.  You deleted this message.
+
+
+if (tipus=="resta"){
+  if (idioma_movil=="spanish"){
+    media<-"\\<Multimedia omitido>"
+    supr<- "mensaje.*eliminado|Eliminaste.*mensaje"
+    
+  }else if(idioma_movil=="catalan"){
+  media<-"\\<Fitxers.*omesos>"
+  supr<- "missatge.*suprimit|suprimit.*missatge"
+
+  
+}else{
+  media<- "\\<Media omitted>"
+  supr<- "message.*deleted|deleted.*message"
+  
+}
+}else{
+  if (idioma_movil=="spanish"){
+  sticker<-"sticker omitido"
+  audio<-"audio omitido"
+  im<-"imagen omitida"
+  supr<- "mensaje.*eliminado|Eliminaste.*mensaje"
+  gif <-"GIF omitido"
+  video<-"Video omitido"
+  
+  #ESTES SE LLEVARAN MES ENDAVANT per al wordcloud
+  ubi<-"bicación:"                                    #no 100%segur 
+  contactes<-"Tarjeta de contacto omitida"
+  document<-"documento omitido"
+  
+  }else if(idioma_movil=="catalan"){
+  sticker<-"enganxina omesa"
+  audio<-"Àudio omès"
+  im<-"Imatge omesa"
+  supr<- "missatge.*suprimit|suprimit.*missatge"
+  gif <-"GIF omès"
+  video<-"vídeo omès"  
+  
+  #ESTES SE LLEVARAN MES ENDAVANT per al wordcloud
+  ubi<-"Ubicació:"
+  contactes<-"Targeta de contacte omesa"
+  document<-"Document omès"
+  
+  
+}else{
+  sticker<-"sticker omitted"
+  audio<-"audio omitted"
+  im<-"image omitted"
+  supr<- "message.*deleted|deleted.*message"
+  gif <-"GIF omitted"
+  video<-"video omitted"
+  
+  #ESTES SE LLEVARAN MES ENDAVANT per al wordcloud
+  ubi<-"Location:"                                   #no 100%segur 
+  contactes<-"Contact card omitted"
+  document<-"document omitted"
+  
+  
+}
+  
+}
+
+
+
+```
+
+
+
+# Com comencen les converses
+***
+
+Esta gràfica exemplifica de quina manera comencen les vostres converses. Distingix entre: Missatges eliminats, Enllaços, Multimèdia (àudios, stickers, imatges, gifs i vídeos) i Text.
+<br>
+
+```{r echo=FALSE, fig.align="left", fig.cap="<br>Horitzontal: Tipus de missatge // Vertical: Percentatge // Etiquetes: Percentatge exacte"}
+
+#En esta funcio discriminem entre IOS i Android perque uns reconeixen entre stikers, imatges, i audio i l'altre no
+
+#ASSUMIM QUE JA TENEN ELS LOGICALS de MEDIA, LINK, etc
+
+#DIES PARLATS
+#dataset_plot<-xat[!duplicated(xat$data),]
+
+
+if (tipus=="resta"){ 
+  #per a RESTA!!
+  dataset_plot<-xat[!duplicated(xat$data),] %>% 
+    select(comm) %>% 
+    mutate(eliminat=str_detect(.$comm, supr ), media=str_detect(.$comm, media ), link=str_detect(.$comm, "http" ))%>%
+    summarise(tot_media=sum(media),tot_eliminat=sum(eliminat), tot_link=sum(link),  tot_xat=n()-(tot_eliminat+tot_link+tot_media))
+    
+    
+  dataset_plot %>%
+   gather(key=tipus, value=freq)%>%
+    mutate(perc=100*round(freq/sum(freq),2))%>%
+  ggplot(., aes(x=tipus, y=perc, fill=tipus))+
+  geom_col(width=0.5)+
+    geom_label(aes(x=tipus, y=max(perc), label=freq), colour = "white", fontface = "bold")+
+    geom_label(aes(x=tipus, y=0, label=paste(perc, "%", sep="")), colour = "white", fontface = "bold")+
+    theme_x+
+    scale_x_discrete(labels=c("tot_eliminat" = "Eliminats", "tot_link" = "Enllaços","tot_media" = "Mèdia", "tot_xat"="Text"))+
+    scale_y_continuous(labels = function(x) paste0(x, "%"))
+  
+  
+  
+}else{
+  #PEr a IOS
+  
+   dataset_plot<- xat[!duplicated(xat$data),]  %>% 
+     select(comm)%>%
+     mutate(eliminat=str_detect(.$comm, supr ), sticker=str_detect(.$comm, sticker ),imatge=str_detect(.$comm, im ),audio=str_detect(.$comm, audio ) ,link=str_detect(.$comm, "http" ), gif=str_detect(.$comm, gif ),video=str_detect(.$comm, video )) %>% 
+    summarise(tot_imatge=sum(imatge),tot_audio=sum(audio),tot_sticker=sum(sticker),tot_eliminat=sum(eliminat), tot_link=sum(link), tot_gif=sum(gif), tot_video=sum(video)  , tot_xat=n()-(tot_eliminat+tot_link+tot_audio+tot_sticker+tot_imatge + tot_gif + tot_video))
+   
+   
+   
+   
+   
+     dataset_plot %>%
+   gather(key=tipus, value=freq)%>%
+    mutate(perc=100*round(freq/sum(freq),2))%>%
+  ggplot(., aes(x=tipus, y=perc, fill=tipus))+
+  geom_col(width=0.5)+
+    geom_label(aes(x=tipus, y=max(perc), label=freq), colour = "white", fontface = "bold")+
+    geom_label(aes(x=tipus, y=0, label=paste(perc, "%", sep="")), colour = "white", fontface = "bold")+
+    theme_x+
+    scale_x_discrete(labels=c("tot_eliminat" = "Eliminats", "tot_link" = "Enllaços","tot_imatge" = "Imatges", "tot_audio"="Àudios", "tot_sticker"="Stickers", "tot_video"= "Vídeo", "tot_gif"= "GIFs", "tot_xat"="Text"))+
+    scale_y_continuous(labels = function(x) paste0(x, "%"))
+     
+     
+     
+     
+   
+}
+
+  
+```
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br>
+
+# Què escrius? {.tabset .tabset-fade .tabset-pills}
+***
+
+## Taula 
+
+Saps qué envieu cadascú? Esta taula comptabilitza els missatges per persona i de quin tipus són: Missatges eliminats, Links, Mèdia (àudios, stickers, imatges, gifs i vídeos) o Text.
+
+<br>
+
+```{r fig.height= height_plot, echo=FALSE, fig.align="left", fig.cap="<br>Horitzontal: Tipus de missatge // Vertical: Persona // Etiquetes: Nombre total"}
+
+#NOMBRE D'USUARIS SE NECESSITA!!!!!!  Esta creat dalt. nombre_usuaris
+
+
+if (tipus=="resta"){
+  #per a RESTA!!
+  dataset_plot<-xat %>% mutate(eliminat=str_detect(xat$comm, supr ), media=str_detect(xat$comm, media ), link=str_detect(xat$comm, "http" )) %>% 
+  select(usuari, eliminat, media, link) %>% #llevem comm
+    group_by(usuari)%>%
+    summarise(tot_media=sum(media),tot_eliminat=sum(eliminat), tot_link=sum(link),  tot_xat=n()-(tot_eliminat+tot_link+tot_media)) %>%
+    gather(key="tipus", value="numero", -usuari)
+    
+    dataset_plot$nom<- rep(c( "Multimèdia","Eliminats",  "Enllaços","Text"), each=length(nombre_usuaris))
+    
+  #LLevem a aquells on el resultat es igual a 0, pa que no aparega.
+dataset_plot<-dataset_plot[!dataset_plot$numero==0,]
+
+dataset_plot %>%
+  
+      ggplot(., aes(y=usuari, x=nom))+
+      geom_label(aes(x=nom, y=usuari, label=numero, fill=tipus), colour = "white", fontface = "bold", size=label_size)+
+      theme(legend.position = "none",
+        panel.grid = element_blank(),
+        axis.title = element_blank(),
+        #axis.text.x = element_blank(),
+        axis.ticks = element_blank(),
+        panel.background = element_blank(),
+        axis.text = element_text(face="bold", color="grey64", size=10),
+        text = element_text(family = "sans"),)+
+  scale_x_discrete(position = "top") 
+  
+}else{
+  #PEr a IOS
+  
+   dataset_plot<- xat %>% mutate(eliminat=str_detect(xat$comm, supr ), sticker=str_detect(xat$comm, sticker ),imatge=str_detect(xat$comm, im ),audio=str_detect(xat$comm, audio ) ,link=str_detect(xat$comm, "http" ), gif=str_detect(xat$comm, gif ),video=str_detect(xat$comm, video )) %>% 
+  select(usuari, eliminat, sticker, imatge, audio, link,gif,video)%>% #llevem comm
+    group_by(usuari)%>%
+    summarise(tot_imatge=sum(imatge),tot_audio=sum(audio),tot_sticker=sum(sticker),tot_eliminat=sum(eliminat), tot_link=sum(link), tot_gif=sum(gif), tot_video=sum(video)  , tot_xat=n()-(tot_eliminat+tot_link+tot_audio+tot_sticker+tot_imatge + tot_gif + tot_video)) %>%
+    gather(key="tipus", value="numero", -usuari)
+    
+    dataset_plot$nom<- rep(c( "Imatges", "Àudios" ,"Stickers","Eliminats",  "Enllaços","GIF","Vídeo", "Text"), each=length(nombre_usuaris))
+    
+    #LLevem a aquells on el resultat es igual a 0, pa que no aparega.
+dataset_plot<-dataset_plot[!dataset_plot$numero==0,]
+
+dataset_plot %>%
+  
+      ggplot(., aes(y=usuari, x=nom))+
+      geom_label(aes(x=nom, y=usuari, label=numero, fill=tipus), colour = "white", fontface = "bold", size=label_size-1)+
+      theme(legend.position = "none",
+        panel.grid = element_blank(),
+        axis.title = element_blank(),
+        #axis.text.x = element_blank(),
+        axis.ticks = element_blank(),
+        panel.background = element_blank(),
+        axis.text = element_text(face="bold", color="grey64", size=10),
+        text = element_text(family = "sans"),)+
+  scale_x_discrete(position = "top", limits=c( "Àudios" ,"GIF" ,"Stickers","Eliminats", "Imatges", "Enllaços","Vídeo", "Text") )
+  
+}
+
+
+
+
+ #ESTE DATASET PLOT POT SERVIR PER A SABER CADA UN QUE ENVIA
+
+```
+
+<br><br><br><br>
+
+## Percentatge
+
+Perquè tingues una idea de la proporció dels tipus de missatges de cada persona, t'ho aclarim ací baix: És igual que l'anterior però amb la relació percentual per persona.
+<br>
+
+```{r fig.height= height_plot, echo=FALSE,  fig.cap="<br>Horitzontal: Tipus de missatge // Vertical: Persona // Etiquetes: Percentatge de cada tipus de missatge per persona"}
+
+if (tipus == "resta"){
+
+dataset_plot %>%
+  group_by(usuari) %>%
+  mutate(perc=round(numero/sum(numero)*100,1))%>%
+  
+  ggplot(., aes(y=usuari, x=nom))+
+      geom_label(aes(x=nom, y=usuari, label=perc, fill=tipus), colour = "white", fontface = "bold", size=label_size)+
+      theme(legend.position = "none",
+        panel.grid = element_blank(),
+        axis.title = element_blank(),
+        #axis.text.x = element_blank(),
+        axis.ticks = element_blank(),
+        panel.background = element_blank(),
+        axis.text = element_text(face="bold", color="grey64", size=10),
+        text = element_text(family = "sans"),)+
+  scale_x_discrete(position = "top") 
+  
+} else{
+  
+  dataset_plot %>%
+  group_by(usuari) %>%
+  mutate(perc=round(numero/sum(numero)*100,2))%>%
+  
+  ggplot(., aes(y=usuari, x=nom))+
+      geom_label(aes(x=nom, y=usuari, label=perc, fill=tipus), colour = "white", fontface = "bold", size=label_size-1)+
+      theme(legend.position = "none",
+        panel.grid = element_blank(),
+        axis.title = element_blank(),
+        #axis.text.x = element_blank(),
+        axis.ticks = element_blank(),
+        panel.background = element_blank(),
+        axis.text = element_text(face="bold", color="grey64", size=10),
+        text = element_text(family = "sans"),)+
+  scale_x_discrete(position = "top", limits=c( "Àudios" ,"GIF" ,"Stickers","Eliminats", "Imatges", "Enllaços","Vídeo", "Text") )
+  
+}
+
+```
+
+
+
+
+<br><br><br><br>
+
+## Gràfica
+
+I ara te mostrem la taula anterior més gràficament: 
+<br>
+
+```{r fig.height= height_plot, echo=FALSE, fig.align="left", fig.cap="<br>Horitzontal: Percentatge acumulat // Vertical: Persona"}
+dataset_plot %>%
+  group_by(usuari)%>%
+  mutate(percentatge=numero/sum(numero)*100) %>%
+  
+  ggplot(., aes(x=usuari, y= percentatge, fill=nom))+
+  geom_col()+
+        theme_y+
+  theme(legend.position = "top",
+          legend.text = element_text(face="bold", color="grey64", size=10))+
+  scale_y_continuous(labels = function(x) paste0(x, "%"))+
+  coord_flip()+
+  labs(fill="Tipus")
+
+
+```
+
+
+```{r include=FALSE}
+if (tipus=="resta"){ 
+  #per a RESTA!!
+  xat<- xat%>%
+    mutate(eliminat=str_detect(.$comm, supr ), media=str_detect(.$comm, media ), link=str_detect(.$comm, "http" ), adjunt = str_detect(.$comm, ".vcf"))%>%
+    dplyr::filter(!media, !link, !eliminat, !adjunt)%>%
+    select(-media, -link, -eliminat, -adjunt)
+    
+
+}else{
+  #PEr a IOS
+  
+  xat<-xat %>%
+     mutate(eliminat=str_detect(xat$comm, supr ), sticker=str_detect(xat$comm, sticker ),imatge=str_detect(xat$comm, im ),audio=str_detect(xat$comm, audio ) ,link=str_detect(xat$comm, "http" ), gif=str_detect(xat$comm, gif ),video=str_detect(xat$comm, video ), ubi=str_detect(xat$comm, ubi ), contactes=str_detect(xat$comm, contactes ), documents=str_detect(xat$comm, document ))%>%
+    
+    
+    dplyr::filter(!audio,!sticker, !imatge,  !link, !eliminat, !gif, !video, !ubi, !contactes, !documents)%>%
+    select(-audio,-sticker, -imatge,  -link, -eliminat, -gif, -video, -ubi, -contactes, -documents)
+   
+}
+
+#D'ara endavant amb que ens quedem? 
+#Creem una nova variable? Alomillor conv'e si moltes parts empren sols el text
+#llevem atributs? llevem el mutate i fem el filter?
+```
+
+<br><br><br><br>
+
+
+
+
+
+# Mitjana de paraules per missatge
+***
+
+Quantes paraules envies en cada missatge? Et mostrem la mitjana per persona!
+<br>
+
+```{r fig.height= height_plot, echo=FALSE, fig.align="left", fig.cap="<br>Horitzontal: Paraules per missatge // Vertical: Persona // Etiquetes: Mitjana per usuari"}
+
+##Sobre este tema, s'a de primer prescindir de media audios etc
+
+#fem una taula?   A
+dataset_plot<-xat %>% 
+  mutate(numParaules= str_count(comm, pattern = "\\s")) %>% 
+  group_by(usuari) %>% 
+  summarise(MitjanaDeParaules=round(sum(numParaules)/n(), 2)) 
+  
+dataset_plot%>%
+  ggplot(., aes(x=reorder(usuari,-MitjanaDeParaules), y=MitjanaDeParaules, fill=usuari))+
+  geom_col(width = 0.5) +
+  geom_label(aes(x=usuari, y=MitjanaDeParaules, label=MitjanaDeParaules), colour = "white", fontface = "bold", size=label_size)+ #TOTAL
+theme_y +
+  ylim(NA, max(dataset_plot$MitjanaDeParaules)+0.5)+
+  coord_flip()
+  
+
+  
+#POSSIBLE PROBLEMA AMB LA LLARGARIA DELS NOMS. LIMITAR?
+
+```
+
+<br>
+
+```{r include=FALSE}
+
+d<-mean(str_count(xat$comm, pattern = "\\s"))
+
+fun_fact<-paste0("La mitjana de  paraules per missatge de tota la conversa és de ", round(d, 2), "! Qui és una persona de poques paraules?")
+
+```
+
+
+
+<br>
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+
+`r fun_fact`
+
+
+<br>
+
+</div>
+
+
+<br><br><br><br>
+
+
+
+```{r include=FALSE}
+
+#Definim aquest dataset per als tres plots seguents
+xat_words<-xat %>%
+ unnest_tokens(input = comm,
+ output = word) %>%
+ filter(!word %in% stop_words) %>%
+ count(usuari, word, sort = TRUE)
+
+#sha de fer un processament de numeros
+xat_words<-xat_words[!grepl("^[0-9]"  ,xat_words$word),]
+```
+
+
+
+
+# Nombre de paraules diferents per persona
+***
+
+Qui té un vocabulari més divers? T'ho mostrem en un segon:
+
+<br>
+
+```{r echo=FALSE  , fig.height= height_plot ,fig.align="center",  fig.cap="<br>Horitzontal: Nombre de paraules diferents // Vertical: Persones // Etiquetes: Nombre de paraules diferents per persona"}
+
+xat_words %>% group_by(usuari) %>% summarise(num_diff = n()) %>%
+  ggplot(., aes(x=reorder(usuari,-num_diff), y=num_diff, fill=usuari))+
+  geom_col() +
+  geom_label(aes(x=usuari, y=max(num_diff), label=num_diff), colour = "white", fontface = "bold", size=5)+
+  theme_y+
+    coord_flip() 
+   
+
+```
+
+<br>
+
+
+```{r include=FALSE}
+#nombre de paraules diferents en el xat
+
+fun_fact<- paste0("Al xat apareixen un total de ", length(unique(xat_words$word)), " paraules diferents!")
+```
+ 
+ 
+<br>
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+
+`r fun_fact`
+
+
+<br>
+
+</div>
+
+<br><br><br><br>
+
+
+
+# Les paraules que sols dius tu
+
+***
+
+Qui té més paraules úniques? Mira-ho!
+
+<br>
+
+```{r echo=FALSE  , fig.height= height_plot ,fig.align="center",  fig.cap="<br>Horitzontal: Nombre de paraules pròpies // Vertical: Persones // Etiquetes: Nombre de paraules pròpies per persona"}
+
+#pillem les parelles d'usuari i de emojis que s'han dit
+words_x_usuari<-  xat_words %>% select(word, usuari) %>% mutate(total=1) %>% spread(key = usuari, value = total )
+
+
+ncol_=ncol(words_x_usuari)
+
+words_x_usuari[2:ncol_][is.na(words_x_usuari[2:ncol_])]<-0
+
+
+#creem un dataset que ens diu la suma total d'words per usuari que no han sigut escrit pels dem'es. Per a fer grafiques
+dataset_plot<- data.frame(usuari=colnames(words_x_usuari)[2:ncol_])
+#aci primer mirem quines linies tenen una suma igual a 1 (vol dir que sols les ha dot un usuari) i despres fem un recompte per columnes per a traure quants sols ha dit eixe usuari
+dataset_plot$num_differents=colSums(words_x_usuari[which(rowSums(words_x_usuari[2:ncol_])==1),2:ncol_])
+
+#Este dataset te els words que sols ha dit un usuari i te el total de vegades. Ho volem per a quedar-nos el l'emoji que m'es vegades s'haja dit
+p<-xat_words %>% select(word, usuari, n)  %>% spread(key = usuari, value = n ) %>% .[which(rowSums(words_x_usuari[2:ncol_])==1),]
+
+
+# aci mirem quin es l'index de les rows per a saber quin es el hex de l'emoji diferent que mes s'ha dit. Tambe en quedem amb el total de vegades.
+index_rows=c()
+num_vegades=c()
+for (i in 2:ncol_){
+  
+  if (sum(is.na(p[,i]))==nrow(p)){
+    
+    index_rows=c(index_rows,1)
+    num_vegades=c(num_vegades, 0)
+    
+  }else{
+    
+    index_rows=c(index_rows,which.max(p[,i]))
+    num_vegades=c(num_vegades, p[which.max(p[,i]),i])
+  }
+  
+  
+  
+  
+}
+
+
+dataset_plot$word<-p$word[index_rows] #traguem l'emoji que m'es ha dit cadascun i no han dit els demes
+dataset_plot$num_vegades=num_vegades # aci el total de vefades que s'ha dit
+
+
+dataset_plot %>%
+  ggplot(., aes(x=reorder(usuari,-num_differents), y=num_differents, fill=usuari))+
+  geom_col() +
+  geom_label(aes(x=usuari, y=max(num_differents), label=num_differents), colour = "white", fontface = "bold", size=5)+
+  theme_y+
+    coord_flip() 
+
+
+#si volem fer un funfact de quins son estos emotis, podem fer un if num_diff!=0 i aixi si algu no en te, no passa res.
+
+```
+
+<br>
+
+```{r include=FALSE}
+#quina 'es la paraula per usuari que mes ha dit pero no la resta
+
+dataset_plot<- dataset_plot %>% filter(num_vegades>0)
+
+fun_fact<-"Quina és la paraula que més dius i que no diu ningú més? <br><br>"
+for (i in 1:nrow(dataset_plot)){
+  fun_fact<-paste0(fun_fact, dataset_plot$usuari[i], ': "', dataset_plot$word[i],'"  amb un total de ', dataset_plot$num_vegades[i ], ' vegades!<br>')
+  
+  
+}
+
+```
+ 
+ 
+
+<br>
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+
+`r fun_fact`
+
+
+<br>
+
+</div>
+
+
+
+
+<br><br><br>
+
+<div class="columna">
+  <a href="https://ko-fi.com/tangibleanalytics">
+    <img src="https://tangibleanalytics.eu/wp-content/uploads/2021/04/kofi2.png" style="width:45%">
+  </a>
+  <br>
+    Si doneu 5€ en total, eixiu a `r round(5/length(nombre_usuaris),2)`€ per cap!🤓 <br>
+    Més barat que anar al bar 😎
+</div>
+
+<br><br>
+
+
+# Com t'assembles a la resta per les paraules que empreu
+
+***
+
+No t'has preguntat mai si t'assembles a les altres persones del xat? Ací et diguem com de prop estàs d'aquestes depenent de les paraules que empreu. Quan més roja estiga la casella, més lluny i diferents sereu i al contrari si la casella s'apropa a colors més clars. 
+
+
+<br>
+
+``` {r echo=FALSE  , fig.height= height_plot ,fig.align="center",  fig.cap="<br>Horitzontal: Persones numerades // Vertical: Persones amb nom i número // Número: Distància entre 2 persones"}
+
+ncol_=length(unique(xat$usuari))+1
+
+matrix=xat_words %>% select(word, usuari, n)  %>% spread(key = usuari, value = n ) %>% .[,2:ncol_] %>% as.matrix()
+matrix[is.na(matrix)]<-0
+
+#calculem les distancies del cosinus
+matrix=1-cosine(matrix)
+
+
+#color dels numeros
+if (range(matrix)[2]-range(matrix)[1]<0.4){
+  color_text="#ffffff"
+  
+}else{
+  
+  color_text="#000000"
+}
+
+
+x<-as.matrix(round(matrix, 2))
+x<-as.data.frame(x)
+
+
+rownames_<-rownames(x)
+
+rownames(x)<- 1:nrow(x)
+colnames(x)<- 1:nrow(x)
+
+
+x <-   x %>%
+    tibble::rownames_to_column( var = "rowname") %>%
+    gather(key="interacciona", value = "dist", -rowname)
+
+x$rowname<-as.integer(x$rowname) -1
+x$interacciona<-as.integer(x$interacciona) -1
+
+
+x %>%
+  ggplot(., aes(x=as.integer(interacciona), y=as.integer(rowname)))+  #notar lo el mes. la variable nom_mesos esta aixi per alguna rao
+  geom_tile(aes(fill = dist)) +
+    geom_text(aes(label = dist), color=color_text, size=text_size)+
+    theme(axis.title  = element_blank(),
+    axis.text = element_text(face="bold", color="grey64", size=10),
+    text = element_text(family = "sans"),
+    legend.position = "top",
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(), 
+    panel.background = element_blank())+
+   scale_y_continuous("", labels = paste0(1:length(rownames_), " - ", rownames_), breaks = 0:(length(rownames_)-1)) +
+   scale_x_continuous(breaks = 0:(length(rownames_)-1),labels =1:length(rownames_))+
+    scale_fill_gradient(low = "white",
+  high = "red") +
+  labs(fill="Distàncies")
+
+
+```
+
+<br>
+
+```{r include=FALSE}
+#nombre de paraules diferents en el xat
+x<- x %>% group_by(rowname) %>%
+  summarise(mean=mean(dist))
+
+
+fun_fact<- paste0("La persona que més s'assembla a tots segons les paraules que gasta és ", rownames_[which.min(x$mean)], "!<br><br>
+                  I la persona més llunyana a totes és ",rownames_[which.max(x$mean)],"!")
+```
+ 
+ 
+
+<br>
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+
+`r fun_fact`
+
+
+<br>
+
+</div>
+
+<br><br><br><br>
+
+
+
+
+
+
+# Imatge Tangible de la vostra conversa
+***
+
+Aquesta és la Imatge Tangible de la vostra conversa: les paraules que més vos caracteritzen, immortalitzades per sempre. A les carpetes adjuntes, teniu també la imatge per a que la gasteu com vulgueu!
+
+```{r include=FALSE, fig.align="center"}
+# Com el Data antic. diu quines son les paraules més dites
+
+xat_words <- xat %>%
+ unnest_tokens(input = comm,
+ output = word) %>%
+ filter(!word %in% stop_words) %>%
+ count( word, sort = TRUE)
+
+xat_words<-xat_words[1:300,]
+
+#Comprovar el tema dels emojis
+xat_words<-xat_words[!grepl("^[0-9]"  ,xat_words$word),]
+xat_words<-xat_words[!grepl(x = xat_words$word, pattern = "[^\x01-\x7Féèíàáòóúñçüïëûæâôβß€ÇÀÁÈÙÌÒÉÍÚÓÑ@]"),]
+xat_words<-xat_words[!grepl(x = xat_words$word, pattern = "@"),]
+
+xat_words<-xat_words[1:200,]
+
+#Arreglem alguna posicio de les paraules
+xat_words$word<-arreglar_paraules(xat_words$word)
+
+```
+
+```{r echo=FALSE}
+imatge_tota_conversa(xat_words$word, color_triat, tmp)
+```
+
+
+
+
+# Sobre les 5 paraules que més dieu  {.tabset .tabset-fade .tabset-pills}
+***
+
+
+## `r toupper(xat_words$word[1])`
+
+<br>
+
+```{r fig.height= height_plot, echo=FALSE, fig.cap="<br>Horitzontal: Percentatge // Vertical: Persona // Etiquetes: Percentatge exacte"}
+
+word<-xat_words$word[1]
+primera_lletra<-substring(word, 1,1)
+
+#Este procediment contempla majuscula en la primera lletra 
+reg_expr<- paste0("(^(",toupper(primera_lletra), "|", primera_lletra, ")", substring(word, 2),"(\\s|[,!?.]|[^\x01-\x7Féèíàáòóúñçüïëûæâôβß€ÇÀÁÈÙÌÒÉÍÚÓÑ]))|(\\s(",toupper(primera_lletra), "|", primera_lletra, ")", substring(word, 2),"(\\s|[,!?.]|[^\x01-\x7Féèíàáòóúñçüïëûæâôβß€ÇÀÁÈÙÌÒÉÍÚÓÑ]|$))" )
+
+
+#Detecta el commentaris on estiga la paraula
+dataset_plot<-xat[str_detect(xat$comm, reg_expr),]
+
+
+
+#Dia que mes s'ha dit
+dia_mes<-dataset_plot%>%
+  group_by(data)%>%
+  summarise(count=n(), perc=round(count/nrow(dataset_plot)*100,1)) %>%
+  arrange(desc(count)) 
+
+
+#PLOT
+dataset_plot%>%
+  group_by(usuari)%>%
+  summarise(count=n(), perc=round(count/nrow(dataset_plot)*100,1)) %>%
+  ggplot(., aes(x=usuari, y=perc, fill=usuari))+
+  geom_col(width = 0.85)+
+  geom_label(aes(x=usuari, y=max(perc)*1.05, label=paste(perc, "%", sep="")), colour = "white", fontface = "bold", size=4.5)+
+  theme_y+
+  scale_y_continuous(labels = function(x) paste0(x, "%"))+
+    coord_flip()
+
+```
+
+
+
+<br>
+
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+<br>
+
+<p3>
+
+
+El dia que més s'ha dit esta paraula és el `r format(dia_mes$data[1], format="%d-%m-%Y")` amb un total de `r dia_mes$count[1]` vegades!
+
+
+
+Esta paraula ha aparegut en un total de `r nrow(dia_mes)` dies, i proporcionalment, en el `r round(nrow(dia_mes)/dies_totals*100,2)`% dels dies en què s'ha parlat!
+
+
+
+El primer dia que es va dir, va ser el `r format(dataset_plot$data[1], format="%d-%m-%Y")` i ho va fer `r dataset_plot$usuari[1]` d'aquesta manera: `r dataset_plot$comm[1]`.
+
+<br>
+
+</p3>
+
+</div>
+
+<br><br><br><br>
+
+## `r toupper(xat_words$word[2])`
+
+<br>
+
+```{r fig.height= height_plot, echo=FALSE, fig.cap="<br>Horitzontal: Percentatge // Vertical: Persona // Etiquetes: Percentatge exacte"}
+
+word<-xat_words$word[2]
+
+primera_lletra<-substring(word, 1,1)
+
+#Este procediment contempla majuscula en la primera lletra 
+reg_expr<- paste0("(^(",toupper(primera_lletra), "|", primera_lletra, ")", substring(word, 2),"(\\s|[,!?.]|[^\x01-\x7Féèíàáòóúñçüïëûæâôβß€ÇÀÁÈÙÌÒÉÍÚÓÑ]))|(\\s(",toupper(primera_lletra), "|", primera_lletra, ")", substring(word, 2),"(\\s|[,!?.]|[^\x01-\x7Féèíàáòóúñçüïëûæâôβß€ÇÀÁÈÙÌÒÉÍÚÓÑ]|$))" )
+
+
+
+#Detecta el commentaris on estiga la paraula
+dataset_plot<-xat[str_detect(xat$comm, reg_expr),]
+
+
+
+
+
+#Dia que mes s'ha dit
+dia_mes<-dataset_plot%>%
+  group_by(data)%>%
+  summarise(count=n(), perc=round(count/nrow(dataset_plot)*100,1)) %>%
+  arrange(desc(count)) 
+
+
+#PLOT
+#PLOT
+dataset_plot%>%
+  group_by(usuari)%>%
+  summarise(count=n(), perc=round(count/nrow(dataset_plot)*100,1)) %>%
+  ggplot(., aes(x=usuari, y=perc, fill=usuari))+
+  geom_col(width = 0.85)+
+  geom_label(aes(x=usuari, y=max(perc)*1.05, label=paste(perc, "%", sep="")), colour = "white", fontface = "bold", size=4.5)+
+  theme_y+
+  scale_y_continuous(labels = function(x) paste0(x, "%"))+
+    coord_flip()
+
+```
+
+<br>
+
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+<br>
+
+<p3>
+
+El dia que més s'ha dit esta paraula és el `r format(dia_mes$data[1], format="%d/%m/%Y")` amb un total de `r dia_mes$count[1]` vegades!
+
+
+
+Esta paraula ha aparegut en un total de `r nrow(dia_mes)` dies, i proporcionalment, en el `r round(nrow(dia_mes)/dies_totals*100,2)`% dels dies en què s'ha parlat!
+
+
+
+El primer dia que es va dir, va ser el `r format(dataset_plot$data[1], format="%d/%m/%Y")` i ho va fer `r dataset_plot$usuari[1]` d'aquesta manera: `r dataset_plot$comm[1]`.
+
+<br>
+</p3>
+
+</div>
+
+
+<br><br><br><br>
+
+## `r toupper(xat_words$word[3])`
+
+
+<br>
+```{r fig.height= height_plot, echo=FALSE, fig.cap="<br>Horitzontal: Percentatge // Vertical: Persona // Etiquetes: Percentatge exacte"}
+
+
+
+word<-xat_words$word[3]
+primera_lletra<-substring(word, 1,1)
+
+#Este procediment contempla majuscula en la primera lletra 
+reg_expr<- paste0("(^(",toupper(primera_lletra), "|", primera_lletra, ")", substring(word, 2),"(\\s|[,!?.]|[^\x01-\x7Féèíàáòóúñçüïëûæâôβß€ÇÀÁÈÙÌÒÉÍÚÓÑ]))|(\\s(",toupper(primera_lletra), "|", primera_lletra, ")", substring(word, 2),"(\\s|[,!?.]|[^\x01-\x7Féèíàáòóúñçüïëûæâôβß€ÇÀÁÈÙÌÒÉÍÚÓÑ]|$))" )
+
+
+#Detecta el commentaris on estiga la paraula
+dataset_plot<-xat[str_detect(xat$comm, reg_expr),]
+
+
+
+
+
+#Dia que mes s'ha dit
+dia_mes<-dataset_plot%>%
+  group_by(data)%>%
+  summarise(count=n(), perc=round(count/nrow(dataset_plot)*100,1)) %>%
+  arrange(desc(count)) 
+
+
+#PLOT
+dataset_plot%>%
+  group_by(usuari)%>%
+  summarise(count=n(), perc=round(count/nrow(dataset_plot)*100,1)) %>%
+  ggplot(., aes(x=usuari, y=perc, fill=usuari))+
+  geom_col(width = 0.85)+
+  geom_label(aes(x=usuari, y=max(perc)*1.05, label=paste(perc, "%", sep="")), colour = "white", fontface = "bold", size=4.5)+
+  theme_y+
+  scale_y_continuous(labels = function(x) paste0(x, "%"))+
+    coord_flip()
+
+```
+
+
+
+
+
+<br>
+
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+<br>
+
+<p3>
+El dia que més s'ha dit esta paraula és el `r format(dia_mes$data[1], format="%d-%m-%Y")` amb un total de `r dia_mes$count[1]` vegades!
+
+
+
+Esta paraula ha aparegut en un total de `r nrow(dia_mes)` dies, i proporcionalment, en el `r round(nrow(dia_mes)/dies_totals*100,2)`% dels dies en què s'ha parlat!
+
+
+
+El primer dia que es va dir, va ser el `r format(dataset_plot$data[1], format="%d-%m-%Y")` i ho va fer `r dataset_plot$usuari[1]` d'aquesta manera: `r dataset_plot$comm[1]`.
+<br>
+</p3>
+
+</div>
+
+<br><br><br><br>
+
+## `r toupper(xat_words$word[4])`
+
+<br>
+
+```{r fig.height= height_plot, echo=FALSE, fig.cap="<br>Horitzontal: Percentatge // Vertical: Persona // Etiquetes: Percentatge exacte"}
+word<-xat_words$word[4]
+primera_lletra<-substring(word, 1,1)
+
+#Este procediment contempla majuscula en la primera lletra 
+reg_expr<- paste0("(^(",toupper(primera_lletra), "|", primera_lletra, ")", substring(word, 2),"(\\s|[,!?.]|[^\x01-\x7Féèíàáòóúñçüïëûæâôβß€ÇÀÁÈÙÌÒÉÍÚÓÑ]))|(\\s(",toupper(primera_lletra), "|", primera_lletra, ")", substring(word, 2),"(\\s|[,!?.]|[^\x01-\x7Féèíàáòóúñçüïëûæâôβß€ÇÀÁÈÙÌÒÉÍÚÓÑ]|$))" )
+
+
+#Detecta el commentaris on estiga la paraula
+dataset_plot<-xat[str_detect(xat$comm, reg_expr),]
+
+
+
+
+
+#Dia que mes s'ha dit
+dia_mes<-dataset_plot%>%
+  group_by(data)%>%
+  summarise(count=n(), perc=round(count/nrow(dataset_plot)*100,1)) %>%
+  arrange(desc(count)) 
+
+
+#PLOT
+dataset_plot%>%
+  group_by(usuari)%>%
+  summarise(count=n(), perc=round(count/nrow(dataset_plot)*100,1)) %>%
+  ggplot(., aes(x=usuari, y=perc, fill=usuari))+
+  geom_col(width = 0.85)+
+  geom_label(aes(x=usuari, y=max(perc)*1.05, label=paste(perc, "%", sep="")), colour = "white", fontface = "bold", size=4.5)+
+  theme_y+
+  scale_y_continuous(labels = function(x) paste0(x, "%"))+
+    coord_flip()
+
+```
+
+<br>
+
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+<br>
+
+<p3>
+El dia que més s'ha dit esta paraula és el `r format(dia_mes$data[1], format="%d-%m-%Y")` amb un total de `r dia_mes$count[1]` vegades!
+
+
+
+Esta paraula ha aparegut en un total de `r nrow(dia_mes)` dies, i proporcionalment, en el `r round(nrow(dia_mes)/dies_totals*100,2)`% dels dies en què s'ha parlat!
+
+
+
+El primer dia que es va dir, va ser el `r format(dataset_plot$data[1], format="%d-%m-%Y")` i ho va fer `r dataset_plot$usuari[1]` d'aquesta manera: `r dataset_plot$comm[1]`.
+
+<br>
+</p3>
+
+</div>
+
+<br><br><br><br>
+
+## `r toupper(xat_words$word[5])`
+
+<br>
+
+```{r fig.height= height_plot, echo=FALSE, fig.cap="<br>Horitzontal: Percentatge // Vertical: Persona // Etiquetes: Percentatge exacte"}
+word<-xat_words$word[5]
+primera_lletra<-substring(word, 1,1)
+
+#Este procediment contempla majuscula en la primera lletra 
+reg_expr<- paste0("(^(",toupper(primera_lletra), "|", primera_lletra, ")", substring(word, 2),"(\\s|[,!?.]|[^\x01-\x7Féèíàáòóúñçüïëûæâôβß€ÇÀÁÈÙÌÒÉÍÚÓÑ]))|(\\s(",toupper(primera_lletra), "|", primera_lletra, ")", substring(word, 2),"(\\s|[,!?.]|[^\x01-\x7Féèíàáòóúñçüïëûæâôβß€ÇÀÁÈÙÌÒÉÍÚÓÑ]|$))" )
+
+
+#Detecta el commentaris on estiga la paraula
+dataset_plot<-xat[str_detect(xat$comm, reg_expr),]
+
+
+
+
+
+#Dia que mes s'ha dit
+dia_mes<-dataset_plot%>%
+  group_by(data)%>%
+  summarise(count=n(), perc=round(count/nrow(dataset_plot)*100,1)) %>%
+  arrange(desc(count)) 
+
+
+#PLOT
+dataset_plot%>%
+  group_by(usuari)%>%
+  summarise(count=n(), perc=round(count/nrow(dataset_plot)*100,1)) %>%
+  ggplot(., aes(x=usuari, y=perc, fill=usuari))+
+  geom_col(width = 0.85)+
+  geom_label(aes(x=usuari, y=max(perc)*1.05, label=paste(perc, "%", sep="")), colour = "white", fontface = "bold", size=4.5)+
+  theme_y+
+  scale_y_continuous(labels = function(x) paste0(x, "%"))+
+    coord_flip()
+
+```
+
+<br>
+
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+<br>
+
+<p3>
+
+El dia que més s'ha dit esta paraula és el `r format(dia_mes$data[1], format="%d-%m-%Y")` amb un total de `r dia_mes$count[1]` vegades!
+
+
+
+Esta paraula ha aparegut en un total de `r nrow(dia_mes)` dies, i proporcionalment, en el `r round(nrow(dia_mes)/dies_totals*100,2)`% dels dies en què s'ha parlat!
+
+
+
+El primer dia que es va dir, va ser el `r format(dataset_plot$data[1], format="%d-%m-%Y")` i ho va fer `r dataset_plot$usuari[1]` d'aquesta manera: `r dataset_plot$comm[1]`.
+
+<br>
+
+</p3>
+
+</div>
+
+
+<br><br><br><br>
+
+
+
+
+# Proporció d'emojis
+***
+
+Quants missatges de text contenen emojis?
+
+```{r fig.height= height_plot, echo=FALSE, fig.align="center", fig.cap="<br>Horitzontal: Percentatge // Vertical: Persona // Estiquetes: Percentatge exacte"}
+
+#tot i que no es optim, s'assembla prou a el que deuria de ser. Comprovat amb xat_emojis
+
+dataset_plot<-xat %>%
+  mutate(emoji=str_detect(xat$comm, "[^\x01-\x7Féèíàáòóúñçüïëûæâôβß€ÇÀÁÈÙÌÒÉÍÚÓÑ@]")) %>%
+  group_by(usuari)%>%
+  summarise(miss_tot=n(), emoj_tot=sum(emoji), ratio=round(emoj_tot/miss_tot*100,1))
+
+dataset_plot %>%
+  ggplot(aes(x=reorder(usuari, -ratio), y=ratio, fill=usuari))+
+  geom_col()+
+  geom_label(aes(x=usuari, y=max(ratio)*1.05, label=paste(ratio, "%", sep="")), colour = "white", fontface = "bold")+
+scale_y_continuous(labels = function(x) paste0(x, "%"))+
+  coord_flip()+
+  theme_y
+
+
+
+
+```
+
+<br>
+
+```{r include=FALSE}
+
+
+
+fun_fact<- paste0("En tota la conversa, el ", round(sum(str_detect(xat$comm, "[^\x01-\x7Féèíàáòóúñçüïëûæâôβß€ÇÀÁÈÙÌÒÉÍÚÓÑ@]"))/nrow(xat)*100, 2)  , "% dels missatges contenen emojis")
+
+
+
+```
+
+
+
+<br>
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+
+`r fun_fact`
+
+
+<br>
+
+</div>
+
+
+<br><br><br><br>
+
+
+```{r include=FALSE}
+#xat<-xat2
+#emojis dels commentaris
+x<-data.frame(rwhatsapp::lookup_emoji(xat$comm))
+
+# dataset complet. ALomillor anomenar xat fins i tot
+xat<- cbind(xat, x)
+
+#Per a treure el dataset amb el total d'emojis 
+xat_emoji<-xat %>%
+  unnest(emoji) %>%
+  group_by(usuari, emoji)%>%
+  summarise(total=n())
+
+#Aci li posem les correspondencies en la info dels emojis
+xat_emoji <- inner_join(xat_emoji, emojis,by="emoji")
+```
+
+
+
+
+
+# Top 10 emojis 
+
+***
+
+Aquesta és fàcil d'explicar: els 10 emojis que més gasteu!
+
+<br>
+
+```{r echo=FALSE ,  fig.align="center",  fig.cap="<br>Horitzontal: Emojis // Vertical: Nombre d'aparicions // Etiquetes: Total emojis"}
+  
+
+xat_emoji %>% group_by(hex) %>% summarise(total=sum(total))%>% arrange(desc(total)) %>% top_n(10)%>%
+
+  ggplot(aes(x = reorder(hex,-total), y = total, fill=hex)) +
+  geom_col(show.legend = FALSE) +
+scale_x_discrete(name = NULL, labels = labels_emojis)+
+geom_label(aes(x=hex, y=max(total)*1.1, label=total), colour = "white", fontface = "bold", size=4.5)+ #TOTAL
+  theme_x+
+   theme(axis.text.x  = element_markdown(color = "red", size = 7), 
+                 axis.text.y  = element_text(size=14),
+                 axis.title.x = element_blank())
+
+
+
+```
+
+
+```{r include=FALSE}
+#nombre d'emojis diferents en el xat
+
+fun_fact<- paste0("Al xat apareixen un total de ", length(unique(xat_emoji$hex)), " emojis diferents!")
+```
+ 
+ 
+<br>
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+
+`r fun_fact`
+
+
+<br>
+
+</div>
+
+<br><br><br><br>
+
+
+
+
+# Top 5 emojis per persona
+
+***
+
+Igual que l'anterior però per persona!
+
+<br>
+
+```{r fig.height=height_horespersona*3.5/2, echo=FALSE ,  fig.align="center",  fig.cap="<br>Horitzontal: Emojis // Vertical: Nombre d'aparicions // Etiquetes: Emojis totals"}
+
+#Per persona
+xat_emoji %>% group_by(usuari) %>% arrange(usuari, desc(total)) %>% slice_head( n = 5)%>% 
+  ggplot(aes(x = hex, y = total, fill=usuari)) +
+  geom_col(show.legend = FALSE) +
+scale_x_discrete(name = NULL, labels = labels_emojis)+
+  geom_label(aes(x=hex, y=max(total)*1.1, label=total), colour = "white", fontface = "bold", size=4.5)+ #TOTAL
+ facet_wrap(~usuari, ncol = 2,scales = "free_x")  +
+  theme_minimal()+
+  theme_x+
+   theme(axis.text.x  = element_markdown(color = "red", size = 7), 
+                 axis.text.y  = element_text(size=14),
+                 axis.title.x = element_blank(),
+         panel.grid.major.x = element_blank())
+
+
+
+```
+
+<br><br><br>
+
+
+
+<div class="columna">
+  <a href="https://ko-fi.com/tangibleanalytics">
+    <img src="https://tangibleanalytics.eu/wp-content/uploads/2021/04/kofi2.png" style="width:45%">
+  </a>
+  <br>
+    I aleshores va pensar: "Això ho pague jo!"😜 <br>
+    Sigues partícep del projecte!
+</div>
+
+
+<br><br>
+
+# Nombre d'emojis diferents per persona
+
+Qui té un vocabulari divers en emojis i qui no? T'ho desvelem amb la gràfica del nombre d'emojis diferents que ha gastat cada persona.
+
+<br>
+
+```{r echo=FALSE  , fig.height= height_plot ,fig.align="center",  fig.cap="<br>Horitzontal: Nombre d'emojis diferents // Vertical: Persones // Etiquetes: Nombre d'emojis diferents per persona"}
+xat_emoji %>% group_by(usuari) %>% summarise(num_diff = n()) %>%
+  ggplot(., aes(x=reorder(usuari,-num_diff), y=num_diff, fill=usuari))+
+  geom_col() +
+  geom_label(aes(x=usuari, y=max(num_diff), label=num_diff), colour = "white", fontface = "bold", size=5)+
+  theme_y+
+    coord_flip() 
+   
+  
+
+
+```
+
+<br><br><br><br>
+
+# Els emojis que sols dius tu
+
+Quins són es emojis que sols dius tu? Et desvelem quants emojis propis té cadascú!
+
+<br>
+
+```{r echo=FALSE  , fig.height= height_plot ,fig.align="center",  fig.cap="<br>Horitzontal: Nombre d'emojis pròpis // Vertical: Persones // Etiquetes: Nombre d'emojis pròpis per persona"}
+usuaris=unique(xat$usuari)
+
+#pillem les parelles d'usuari i de emojis que s'han dit
+emojis_x_usuari<-  xat_emoji %>% select(hex, usuari) %>% mutate(total=1) %>% spread(key = usuari, value = total )
+
+
+ncol_=ncol(emojis_x_usuari)
+
+emojis_x_usuari[2:ncol_][is.na(emojis_x_usuari[2:ncol_])]<-0
+
+
+#creem un dataset que ens diu la suma total d'emojis per usuari que no han sigut escrit pels dem'es. Per a fer grafiques
+dataset_plot<- data.frame(usuari=colnames(emojis_x_usuari)[2:ncol_])
+#aci primer mirem quines linies tenen una suma igual a 1 (vol dir que sols les ha dot un usuari) i despres fem un recompte per columnes per a traure quants sols ha dit eixe usuari
+dataset_plot$num_differents=colSums(emojis_x_usuari[which(rowSums(emojis_x_usuari[2:ncol_])==1),2:ncol_])
+
+#Este dataset te els emojis que sols ha dit un usuari i te el total de vegades. Ho volem per a quedar-nos el l'emoji que m'es vegades s'haja dit
+p<-xat_emoji %>% select(hex, usuari, total)  %>% spread(key = usuari, value = total ) %>% .[which(rowSums(emojis_x_usuari[2:ncol_])==1),]
+
+
+
+# aci mirem quin es l'index de les rows per a saber quin es el hex de l'emoji diferent que mes s'ha dit. Tambe en quedem amb el total de vegades.
+index_rows=c()
+num_vegades=c()
+for (i in 2:ncol_){
+  
+  if (colSums(is.na(p[,i]))==nrow(p)){
+    
+    index_rows=c(index_rows,1)
+    num_vegades=c(num_vegades, 0)
+    
+  }else{
+    
+    index=apply(p[,i],2,which.max)
+    
+    index_rows=c(index_rows,index)
+    num_vegades=c(num_vegades, p[index,i])
+  }
+  
+  
+  
+  
+}
+
+
+dataset_plot$hex<-p$hex[index_rows] #traguem l'emoji que m'es ha dit cadascun i no han dit els demes
+dataset_plot$num_vegades=num_vegades # aci el total de vefades que s'ha dit
+
+dataset_plot %>%
+  ggplot(., aes(x=reorder(usuari,-num_differents), y=num_differents, fill=usuari))+
+  geom_col() +
+  geom_label(aes(x=usuari, y=max(num_differents), label=num_differents), colour = "white", fontface = "bold", size=5)+
+  theme_y+
+    coord_flip() 
+
+
+#si volem fer un funfact de quins son estos emotis, podem fer un if num_diff!=0 i aixi si algu no en te, no passa res.
+
+```
+
+
+<br>
+
+```{r include=FALSE}
+#quin es l'emoji per usuari que mes ha dit pero no la resta
+
+dataset_plot<- dataset_plot %>% filter(num_vegades>0)
+
+fun_fact<-"Quin és l'emoji que més dius i que no diu ningú més? <br><br>"
+for (i in 1:nrow(dataset_plot)){
+  fun_fact<-paste0(fun_fact, dataset_plot$usuari[i], ': "', emojis$emoji[emojis$hex==dataset_plot$hex[i]],'"  amb un total de ', dataset_plot$num_vegades[i ], ' vegades!<br>')
+  
+  
+}
+
+```
+ 
+ 
+
+<br>
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+
+`r fun_fact`
+
+
+<br>
+
+</div>
+
+<br><br><br><br>
+
+
+
+
+# Com t'assembles a la resta pels emojis que gasteu
+
+***
+
+No t'has preguntat mai si t'assembles a les altres persones del xat? Ací et diguem com de prop estàs d'aquestes depenent dels emojis que empreu. Quan més roja estiga la casella, més lluny estareu i al contrari si la casella s'apropa a colors més clars. 
+
+
+<br>
+
+``` {r echo=FALSE  , fig.height= height_plot ,fig.align="center",  fig.cap="<br>Horitzontal: Persones numerades // Vertical: Persones amb nom i número // Número: Distància entre 2 persones"}
+
+ncol_=length(unique(xat_emoji$usuari))+1
+
+matrix=xat_emoji %>% select(hex, usuari, total)  %>% spread(key = usuari, value = total ) %>% .[,2:ncol_] %>% as.matrix()
+
+matrix[is.na(matrix)]<-0
+
+matrix=apply(matrix, MARGIN = 2, FUN = function(x) (x-min(x))/(max(x)-min(x)))
+
+
+#as.data.frame(cosine(matrix))
+
+
+matrix=t(matrix)
+
+x=daisy(matrix)
+
+#color dels numeros
+if (range(x)[2]-range(x)[1]<0.4){
+  color_text="#ffffff"
+  
+}else{
+  
+  color_text="#000000"
+}
+
+
+x<-as.matrix(round(x, 2))
+x<-as.data.frame(x)
+
+
+rownames_<-rownames(x)
+
+rownames(x)<- 1:nrow(x)
+colnames(x)<- 1:nrow(x)
+
+
+x <-   x %>%
+    tibble::rownames_to_column( var = "rowname") %>%
+    gather(key="interacciona", value = "dist", -rowname)
+
+x$rowname<-as.integer(x$rowname) -1
+x$interacciona<-as.integer(x$interacciona) -1
+
+
+x %>%
+  ggplot(., aes(x=as.integer(interacciona), y=as.integer(rowname)))+  #notar lo el mes. la variable nom_mesos esta aixi per alguna rao
+  geom_tile(aes(fill = dist)) +
+    geom_text(aes(label = dist), color=color_text, size=text_size)+
+    theme(axis.title  = element_blank(),
+    axis.text = element_text(face="bold", color="grey64", size=10),
+    text = element_text(family = "sans"),
+    legend.position = "top",
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(), 
+    panel.background = element_blank())+
+   scale_y_continuous("", labels = paste0(1:length(rownames_), " - ", rownames_), breaks = 0:(length(rownames_)-1)) +
+   scale_x_continuous(breaks = 0:(length(rownames_)-1),labels =1:length(rownames_))+
+    scale_fill_gradient(low = "white",
+  high = "red") +
+  labs(fill="Distàncies")
+```
+
+
+
+<br>
+
+```{r include=FALSE}
+#nombre de paraules diferents en el xat
+x<- x %>% group_by(rowname) %>%
+  summarise(mean=mean(dist))
+
+x
+
+fun_fact<- paste0("La persona que més s'assembla a tots segons els emojis que gasta és ", rownames_[which.min(x$mean)], "!<br><br>
+                  I la persona més llunyana a totes és ",rownames_[which.max(x$mean)],"!")
+```
+ 
+ 
+
+<br>
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+
+`r fun_fact`
+
+
+<br>
+
+</div>
+
+<br><br><br><br>
+
+
+
+
+# Sentiments a través dels emojis {.tabset .tabset-fade .tabset-pills}
+
+***
+
+
+
+```{r eval=FALSE, include=FALSE}
+# carreguem el dataset que té correspondències en valors positius, negatius i neutrals sobre els diferents emojis
+#load("sent_emoji.R")
+
+```
+
+
+
+
+
+## Positiu
+
+Qui és el més positiu del xat segons els emojis que gasta? 
+
+Els percentatges que veus descriuen quina és la propoció d'emojis positius que envia cada persona.
+
+<br>
+
+```{r echo=FALSE  , fig.height= height_plot ,fig.align="center",  fig.cap="<br>Horitzontal: Percentatge // Vertical: Persones // Etiquetes: Percentatge exacte per persona"}
+
+
+dataset_plot <-inner_join(xat_emoji, sent_emoji, by=c("emoji"="char")) %>%
+  group_by(usuari) %>%
+  summarise(mean_negatiu= (sum(total*negatiu))*100/sum(total),mean_neutral= sum(total*neutral)*100/sum(total),mean_positiu= sum(total*positiu)/sum(total)*100 )%>%
+  gather(key="tipus", value = "valor", mean_negatiu,  mean_positiu,mean_neutral)
+  
+  
+  
+  dataset_plot %>%
+  filter(tipus=="mean_positiu") %>%
+  ggplot(., aes(x=reorder(usuari, -valor), y=valor))+
+  geom_col(fill="#00A440")+
+  geom_label(aes(x=usuari, y=max(valor)*1.05, label=paste(round(valor,1), "%", sep="")), colour = "#00A440", fontface = "bold", size=4.5)+
+  theme_y+
+  scale_y_continuous(labels = function(x) paste0(x, "%"))+
+  coord_flip()
+  
+    
+```
+
+<br><br><br><br>
+
+## Negatiu
+
+I el més negatiu?
+
+<br>
+
+```{r echo=FALSE  , fig.height= height_plot ,fig.align="center",  fig.cap="<br>Horitzontal: Percentatge // Vertical: Persones // Etiquetes: Percentatge exacte per persona"}
+ 
+dataset_plot %>%
+  filter(tipus=="mean_negatiu") %>%
+  ggplot(., aes(x=reorder(usuari, -valor), y=valor))+
+  geom_col(fill="#DC0C10")+
+  geom_label(aes(x=usuari, y=max(valor)*1.05, label=paste(round(valor,1), "%", sep="")), colour = "#DC0C10", fontface = "bold", size=4.5)+
+  theme_y+
+  scale_y_continuous(labels = function(x) paste0(x, "%"))+
+  coord_flip()
+  
+  
+```
+
+<br><br><br><br>
+
+
+
+## Conjunt
+
+Ara veus quina és la proporció de sentiments per a cada persona en els emojis que envieu: si són positius, negatius o neutres. 
+
+
+<br>
+
+```{r echo=FALSE  , fig.height= height_plot ,fig.align="center",  fig.cap="<br>Horitzontal: Percentatge // Vertical: Persones // Etiquetes: Percentatge exacte per persona"}
+
+dataset_plot %>%
+  ggplot(., aes(x=usuari, y=valor, fill=tipus))+
+  geom_col()+
+  theme_y+
+  scale_fill_manual(values = c("positiu"="#DC0C10", "#F8BA56", "#00A440")) +
+  scale_y_continuous(labels = function(x) paste0(x, "%"))+
+  coord_flip()
+  
+  
+```
+
+<br><br><br><br>
+
+# Sobre els 5 emojis que més dieu {.tabset .tabset-fade .tabset-pills}
+
+***
+
+Està bé saber quins són els emojis que més es repetixen en la conversa... però quines són les aportacions de cadascú a eixe total? Sols has de mirar-ho:
+
+
+<br>
+
+```{r include=FALSE}
+#traguem quins son els emojis que més s'han dit i el total 
+emoji_=xat_emoji %>% 
+  group_by(emoji) %>% 
+  summarise(total=sum(total))%>% 
+  arrange(desc(total)) %>% top_n(5)
+
+dies_totals= length(unique(xat$data))
+
+```
+
+## `r emoji_$emoji[1]`
+
+
+```{r echo=FALSE  , fig.height= height_plot ,fig.align="center",  fig.cap="<br>Horitzontal: Percentatge sobre el total // Vertical: Persones // Etiquetes: Percentatge exacte per persona"}
+#dataset dels dies que més s'ha dit
+dataset_plot<-xat %>%
+ # cbind(., x) %>%
+  unnest(emoji) %>%
+  group_by(data, emoji)%>%
+  summarise(total=n()) 
+
+
+dia_mes<- dataset_plot%>%
+  filter(emoji==emoji_$emoji[1]) %>%
+  arrange(desc(total))
+
+
+
+xat_emoji %>% filter( emoji==emoji_$emoji[1]) %>%
+
+  group_by(usuari)%>%
+  summarise( perc=round(total/emoji_$total[1]*100,1)) %>%
+  ggplot(., aes(x=usuari, y=perc, fill=usuari))+
+  geom_col(width = 0.85)+
+  geom_label(aes(x=usuari, y=max(perc)*1.05, label=paste(perc, "%", sep="")), colour = "white", fontface = "bold", size=4.5)+
+  theme_y+
+  scale_y_continuous(labels = function(x) paste0(x, "%"))+
+    coord_flip()
+
+
+
+```
+
+<br>
+
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+<br>
+
+<p3>
+
+
+El dia que més s'ha escrit este emoji és el `r format(dia_mes$data[1], format="%d-%m-%Y")` amb un total de `r dia_mes$total[1]` vegades!
+
+
+
+Aquest emoji ha aparegut en un total de `r nrow(dia_mes)` dies, i proporcionalment, en el `r round(nrow(dia_mes)/dies_totals*100,2)`% dels dies en què s'ha parlat!
+<br>
+
+</p3>
+
+</div>
+
+<br><br><br><br>
+
+
+
+
+## `r emoji_$emoji[2]`
+
+
+```{r echo=FALSE  , fig.height= height_plot ,fig.align="center",  fig.cap="<br>Horitzontal: Percentatge sobre el total // Vertical: Persones // Etiquetes: Percentatge exacte per persona"}
+#dataset dels dies que més s'ha dit
+dia_mes<- dataset_plot%>%
+  filter(emoji==emoji_$emoji[2]) %>%
+  arrange(desc(total))
+
+
+
+xat_emoji %>% filter( emoji==emoji_$emoji[2]) %>%
+
+  group_by(usuari)%>%
+  summarise( perc=round(total/emoji_$total[2]*100,1)) %>%
+  ggplot(., aes(x=usuari, y=perc, fill=usuari))+
+  geom_col(width = 0.85)+
+  geom_label(aes(x=usuari, y=max(perc)*1.05, label=paste(perc, "%", sep="")), colour = "white", fontface = "bold", size=4.5)+
+  theme_y+
+  scale_y_continuous(labels = function(x) paste0(x, "%"))+
+    coord_flip()
+
+
+
+```
+
+<br>
+
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+<br>
+
+<p3>
+
+
+El dia que més s'ha escrit este emoji és el `r format(dia_mes$data[1], format="%d-%m-%Y")` amb un total de `r dia_mes$total[1]` vegades!
+
+
+Aquest emoji ha aparegut en un total de `r nrow(dia_mes)` dies, i proporcionalment, en el `r round(nrow(dia_mes)/dies_totals*100,2)`% dels dies en què s'ha parlat!
+
+<br>
+
+</p3>
+
+</div>
+
+<br><br><br><br>
+
+
+
+
+## `r emoji_$emoji[3]`
+
+
+```{r echo=FALSE  , fig.height= height_plot ,fig.align="center",  fig.cap="<br>Horitzontal: Percentatge sobre el total // Vertical: Persones // Etiquetes: Percentatge exacte per persona"}
+#dataset dels dies que més s'ha dit
+dia_mes<- dataset_plot%>%
+  filter(emoji==emoji_$emoji[3]) %>%
+  arrange(desc(total))
+
+
+
+xat_emoji %>% filter( emoji==emoji_$emoji[3]) %>%
+
+  group_by(usuari)%>%
+  summarise( perc=round(total/emoji_$total[3]*100,1)) %>%
+  ggplot(., aes(x=usuari, y=perc, fill=usuari))+
+  geom_col(width = 0.85)+
+  geom_label(aes(x=usuari, y=max(perc)*1.05, label=paste(perc, "%", sep="")), colour = "white", fontface = "bold", size=4.5)+
+  theme_y+
+  scale_y_continuous(labels = function(x) paste0(x, "%"))+
+    coord_flip()
+
+
+
+```
+
+<br>
+
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+<br>
+
+<p3>
+
+
+El dia que més s'ha escrit este emoji és el `r format(dia_mes$data[1], format="%d-%m-%Y")` amb un total de `r dia_mes$total[1]` vegades!
+
+
+
+Aquest emoji ha aparegut en un total de `r nrow(dia_mes)` dies, i proporcionalment, en el `r round(nrow(dia_mes)/dies_totals*100,2)`% dels dies en què s'ha parlat!
+
+<br>
+</p3>
+
+</div>
+
+<br><br><br><br>
+
+
+
+## `r emoji_$emoji[4]`
+
+
+```{r echo=FALSE  , fig.height= height_plot ,fig.align="center",  fig.cap="<br>Horitzontal: Percentatge sobre el total // Vertical: Persones // Etiquetes: Percentatge exacte per persona"}
+#dataset dels dies que més s'ha dit
+dia_mes<- dataset_plot%>%
+  filter(emoji==emoji_$emoji[4]) %>%
+  arrange(desc(total))
+
+
+
+xat_emoji %>% filter( emoji==emoji_$emoji[4]) %>%
+
+  group_by(usuari)%>%
+  summarise( perc=round(total/emoji_$total[4]*100,1)) %>%
+  ggplot(., aes(x=usuari, y=perc, fill=usuari))+
+  geom_col(width = 0.85)+
+  geom_label(aes(x=usuari, y=max(perc)*1.05, label=paste(perc, "%", sep="")), colour = "white", fontface = "bold", size=4.5)+
+  theme_y+
+  scale_y_continuous(labels = function(x) paste0(x, "%"))+
+    coord_flip()
+
+
+
+```
+
+<br>
+
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+<br>
+
+<p3>
+
+
+El dia que més s'ha escrit este emoji és el `r format(dia_mes$data[1], format="%d-%m-%Y")` amb un total de `r dia_mes$total[1]` vegades!
+
+
+
+Aquest emoji ha aparegut en un total de `r nrow(dia_mes)` dies, i proporcionalment, en el `r round(nrow(dia_mes)/dies_totals*100,2)`% dels dies en què s'ha parlat!
+
+<br>
+</p3>
+
+</div>
+
+<br><br><br><br>
+
+
+
+## `r emoji_$emoji[5]`
+
+
+```{r echo=FALSE  , fig.height= height_plot ,fig.align="center",  fig.cap="<br>Horitzontal: Percentatge sobre el total // Vertical: Persones // Etiquetes: Percentatge exacte per persona"}
+#dataset dels dies que més s'ha dit
+dia_mes<- dataset_plot%>%
+  filter(emoji==emoji_$emoji[5]) %>%
+  arrange(desc(total))
+
+
+
+xat_emoji %>% filter( emoji==emoji_$emoji[5]) %>%
+
+  group_by(usuari)%>%
+  summarise( perc=round(total/emoji_$total[5]*100,1)) %>%
+  ggplot(., aes(x=usuari, y=perc, fill=usuari))+
+  geom_col(width = 0.85)+
+  geom_label(aes(x=usuari, y=max(perc)*1.05, label=paste(perc, "%", sep="")), colour = "white", fontface = "bold", size=4.5)+
+  theme_y+
+  scale_y_continuous(labels = function(x) paste0(x, "%"))+
+    coord_flip()
+
+
+
+```
+
+<br>
+
+
+<div class="card card-4">
+
+<div class="funfact">
+
+★★★ FUN FACT ★★★
+
+</div>
+
+<br>
+
+<p3>
+
+
+El dia que més s'ha escrit este emoji és el `r format(dia_mes$data[1], format="%d-%m-%Y")` amb un total de `r dia_mes$total[1]` vegades!
+
+
+
+Aquest emoji ha aparegut en un total de `r nrow(dia_mes)` dies, i proporcionalment, en el `r round(nrow(dia_mes)/dies_totals*100,2)`% dels dies en què s'ha parlat!
+<br>
+</p3>
+
+</div>
+
+<br><br><br><br>
+
+```{r include=FALSE}
+rm(xat_emoji, dataset_plot, dia_mes, matrix, intervencions, fun_fact,p, xat_words, emojis_x_usuari, words_x_usuari  )
+imatges_emojis(xat, tmp )
+```
+
+
+
+# Tangible Analytics
+***
+
+No podiem deixar que les converses es quedaren només al mòbil. 
+
+<p style="text-align:right;">Així que decidirem immortalitzar-les a través dels hàbits, paraules i emojis que fan a cadascuna diferent.</p>
+
+Perquè n'hi ha massa hores escrites que no poden caure en l'oblit.
+
+<br><br>
+
+```{=html}
+
+<div class="promo"> 
+  Ara et toca a tu!
+</div>
+<div class = "subpromo">Acabes de convertir una conversa en Tangible per a sempre</div>
+<div class = "subpromo">Dona suport al treball i esforç invertit!</div>
+<div class = "subpromo">Només així podem continuar i arribar a més gent</div>
+<br><br><br>
+
+
+  <div class="columna">
+    <a href="https://ko-fi.com/tangibleanalytics">
+      <img src="https://tangibleanalytics.eu/wp-content/uploads/2021/04/kofi2.png" style="width:45%">
+    </a>
+    <br>
+    Ens ho hem guanyat? <br>
+    Participa econòmicament!
+  </div>
+  
+<br> 
+
+  <div class="columna">
+    <a href="https://instagram.com/tangibleanalytics?igshid=uyr7wda71e0n">
+      <img src="https://tangibleanalytics.eu/wp-content/uploads/2021/04/insta.png" style="width:20%">
+    </a>
+    <a href="https://twitter.com/TangibleAnalyti?s=03">
+      <img src="https://tangibleanalytics.eu/wp-content/uploads/2021/04/tw.png" style="width:22%">
+    </a>
+    <br>
+    Segueix-nos a xxss! #BeTangible
+  </div>
+
+<br>
+
+  <div class="columna">
+    <a href="https://www.tangibleanalytics.eu/contacte/">
+      <img src="https://tangibleanalytics.eu/wp-content/uploads/2021/04/newsletter.png" style="width:20%">
+    </a>
+    <br>
+    Subscriu-te a les novetats!
+  </div>
+
+
+<br><br>
+
+```
+
+
+
+
+<br><br>
+
+![](./needs/IMG_0212.JPG)
+
+
+
+
+
+
+
+&nbsp;
+<hr />
+<p style="text-align: center;">Tangibilitzat amb ❤️ per <a href="https://tangibleanalytics.eu/">Tangible Analytics</a></p>
+
+
+<p style="text-align: center;">
+    <a href="https://www.instagram.com/tangibleanalytics/" class="fa fa-instagram"></a>
+</p>
+
+
+&nbsp;
+
+
+
+
+
+
+
+
+</article>
